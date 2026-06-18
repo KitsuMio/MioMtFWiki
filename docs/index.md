@@ -15,9 +15,9 @@ hero:
       link: /first-step
 
 features:
-  - title: ✅结论优先
+  - title: ✅ 结论优先
     details: 第一屏就是答案，不是背景、定义、历史铺垫完才告诉你结论
-  - title: 🌐来自社区
+  - title: 🌐 来自社区
     details: 内容来自社区正在问的真实问题，不是维护者觉得重要的内容
 ---
 

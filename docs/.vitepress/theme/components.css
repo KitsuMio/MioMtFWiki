@@ -357,12 +357,16 @@ div[class*="language-"] {
 
   overflow:
     hidden;
+}
 
-  /* 覆盖 VitePress 官方默认：移动端代码块用 margin: 16px -24px
-     让内容满宽贴边、且不带圆角（640px 以上才收回 margin）。
-     既然这里所有宽度下都要圆角和边框，必须把 margin 收回来，
-     否则圆角盒子会被那个负 margin 顶到容器边缘外面去。 */
-  margin: 16px 0;
+/* 覆盖 VitePress 官方默认：官方在 < 640px 时用 margin: 16px -24px
+   让代码块左右各探出 24px、贴到屏幕边缘、且不带圆角。
+   这条官方规则的选择器是 .vp-doc div[class*='language-']，
+   特异性比上面这条规则高，且在最终打包 CSS 中可能排在更后面，
+   所以必须用同等或更高特异性 + !important 才能稳定覆盖，
+   否则代码块会一直比文字、表格宽出 48px（左右各 24px）。 */
+.vp-doc div[class*="language-"] {
+  margin: 16px 0 !important;
 }
 
 /* =========================================================

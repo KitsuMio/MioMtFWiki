@@ -72,4 +72,5 @@
 ## 接下来可以看
 
 - [HRT 入门](./hrt-start)
-- [常见刻板印象澄清](./stereotypes)
+- [概念与术语](./concepts)
+- [常见刻板印象与误解](./stereotypes)

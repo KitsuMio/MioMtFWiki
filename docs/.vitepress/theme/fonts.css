@@ -1,113 +1,84 @@
-/* HarmonyOS Sans */
+/* ===========================
+   Force HarmonyOS Sans SC
+=========================== */
 
-@font-face {
-  font-family: "HarmonyOS Sans";
-  src: url("/fonts/HarmonyOS_Sans_SC_Thin.ttf") format("truetype");
-  font-weight: 100;
-  font-style: normal;
+html,
+body,
+#app,
+.VPApp,
+.VPContent,
+.VPDoc,
+.VPNav,
+.VPSidebar,
+.VPFooter {
+  font-family: "HarmonyOS Sans SC", sans-serif !important;
 }
 
-@font-face {
-  font-family: "HarmonyOS Sans";
-  src: url("/fonts/HarmonyOS_Sans_SC_Light.ttf") format("truetype");
-  font-weight: 300;
-  font-style: normal;
+/* 所有元素 */
+
+*,
+*::before,
+*::after {
+  font-family: inherit !important;
 }
 
-@font-face {
-  font-family: "HarmonyOS Sans";
-  src: url("/fonts/HarmonyOS_Sans_SC_Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
+/* 输入框 */
+
+input,
+textarea,
+button,
+select {
+  font-family: "HarmonyOS Sans SC", sans-serif !important;
 }
 
-@font-face {
-  font-family: "HarmonyOS Sans";
-  src: url("/fonts/HarmonyOS_Sans_SC_Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
+/* Hero */
+
+.VPHero,
+.VPHero * {
+  font-family: "HarmonyOS Sans SC", sans-serif !important;
 }
 
-@font-face {
-  font-family: "HarmonyOS Sans";
-  src: url("/fonts/HarmonyOS_Sans_SC_Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-}
+/* Markdown */
 
-@font-face {
-  font-family: "HarmonyOS Sans";
-  src: url("/fonts/HarmonyOS_Sans_SC_Black.ttf") format("truetype");
-  font-weight: 900;
-  font-style: normal;
-}
-
-:root {
-
-  --vp-font-family-base:
-    "HarmonyOS Sans",
-    "Segoe UI",
-    "Microsoft YaHei",
-    sans-serif;
-
-  --vp-font-family-mono:
-    "Maple Mono",
-    "Cascadia Code",
-    "JetBrains Mono",
-    monospace;
-}
-
-/* H1 */
-
-.vp-doc h1 {
-  font-weight: 700;
-}
-
-/* H2 */
-
-.vp-doc h2 {
-  font-weight: 600;
-}
-
-/* H3 */
-
-.vp-doc h3 {
-  font-weight: 600;
+.vp-doc,
+.vp-doc * {
+  font-family: "HarmonyOS Sans SC", sans-serif !important;
 }
 
 /* Sidebar */
 
-.VPSidebar {
-  font-weight: 500;
+.VPSidebar,
+.VPSidebar * {
+  font-family: "HarmonyOS Sans SC", sans-serif !important;
 }
 
 /* Navbar */
 
-.VPNavBar {
-  font-weight: 500;
+.VPNav,
+.VPNav * {
+  font-family: "HarmonyOS Sans SC", sans-serif !important;
 }
 
-.VPHero .name {
+/* Search */
 
-  font-family:
-    "HarmonyOS Sans";
-
-  font-weight:
-    900;
-
-  letter-spacing:
-    -0.03em;
+.DocSearch,
+.DocSearch * {
+  font-family: "HarmonyOS Sans SC", sans-serif !important;
 }
 
-/* Code Block Font */
+/* Buttons */
 
-.vp-doc pre,
-.vp-doc code,
+button,
+.VPButton,
+.VPButton * {
+  font-family: "HarmonyOS Sans SC", sans-serif !important;
+}
+
+/* Code Block */
+
+pre,
+code,
 .vp-code-group,
 div[class*="language-"] {
-  font-family:
-    "HarmonyOS Sans",
-    "Segoe UI",
-    "Microsoft YaHei",
-    sans-serif !important;
+  font-family: "HarmonyOS Sans SC", sans-serif !important;
 }

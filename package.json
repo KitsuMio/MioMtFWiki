@@ -14,7 +14,6 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
-    "@lobehub/webfont-harmony-sans-sc": "^1.0.0",
     "vitepress": "^1.6.4"
   }
 }

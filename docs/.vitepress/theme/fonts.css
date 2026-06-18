@@ -1,84 +1,62 @@
-/* ===========================
-   Force HarmonyOS Sans SC
-=========================== */
+@import url("https://cdn.jsdelivr.net/npm/harmonyos-sans-sc-webfont-splitted@1.1.0/dist/index.min.css");
+
+:root {
+  --vp-font-family-base:
+    "HarmonyOS Sans SC",
+    "Microsoft YaHei",
+    "Segoe UI",
+    sans-serif;
+}
+
+/* 全站正文 */
 
 html,
 body,
 #app,
-.VPApp,
-.VPContent,
-.VPDoc,
-.VPNav,
-.VPSidebar,
-.VPFooter {
-  font-family: "HarmonyOS Sans SC", sans-serif !important;
-}
-
-/* 所有元素 */
-
-*,
-*::before,
-*::after {
-  font-family: inherit !important;
-}
-
-/* 输入框 */
-
-input,
-textarea,
-button,
-select {
-  font-family: "HarmonyOS Sans SC", sans-serif !important;
+.VPApp {
+  font-family: var(--vp-font-family-base);
 }
 
 /* Hero */
 
 .VPHero,
 .VPHero * {
-  font-family: "HarmonyOS Sans SC", sans-serif !important;
-}
-
-/* Markdown */
-
-.vp-doc,
-.vp-doc * {
-  font-family: "HarmonyOS Sans SC", sans-serif !important;
-}
-
-/* Sidebar */
-
-.VPSidebar,
-.VPSidebar * {
-  font-family: "HarmonyOS Sans SC", sans-serif !important;
+  font-family: var(--vp-font-family-base) !important;
 }
 
 /* Navbar */
 
 .VPNav,
 .VPNav * {
-  font-family: "HarmonyOS Sans SC", sans-serif !important;
+  font-family: var(--vp-font-family-base) !important;
 }
 
-/* Search */
+/* Sidebar */
+
+.VPSidebar,
+.VPSidebar * {
+  font-family: var(--vp-font-family-base) !important;
+}
+
+/* Markdown */
+
+.vp-doc,
+.vp-doc * {
+  font-family: var(--vp-font-family-base) !important;
+}
+
+/* 搜索框 */
 
 .DocSearch,
 .DocSearch * {
-  font-family: "HarmonyOS Sans SC", sans-serif !important;
+  font-family: var(--vp-font-family-base) !important;
 }
 
-/* Buttons */
+/* 输入组件 */
 
+input,
+textarea,
 button,
-.VPButton,
-.VPButton * {
-  font-family: "HarmonyOS Sans SC", sans-serif !important;
-}
-
-/* Code Block */
-
-pre,
-code,
-.vp-code-group,
-div[class*="language-"] {
-  font-family: "HarmonyOS Sans SC", sans-serif !important;
+select {
+  font-family: var(--vp-font-family-base) !important;
 }

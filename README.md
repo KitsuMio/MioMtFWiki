@@ -1,5 +1,8 @@
 # 🏳️‍⚧️ MioMtFWiki
 
+[![Telegram Channel](https://img.shields.io/badge/Telegram-频道-26A5E4?logo=telegram)](https://t.me/MioMtFWiki)
+[![Telegram Group](https://img.shields.io/badge/Telegram-群组-26A5E4?logo=telegram)](https://t.me/MioMtFWikiGroup)
+
 > 来自社区、服务社区的现代跨性别知识库
 
 MioMtFWiki 是一个社区驱动的跨性别知识库项目，致力于用清晰、准确、易于传播的方式整理跨性别相关知识。

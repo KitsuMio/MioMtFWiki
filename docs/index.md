@@ -13,6 +13,12 @@ hero:
     - theme: alt
       text: 性别认同入门
       link: /first-step
+    - theme: alt
+      text: 概念与术语
+      link: /concepts
+    - theme: alt
+      text: 刻板印象与误解
+      link: /stereotypes
 
 features:
   - title: ✅ 结论优先

@@ -1,0 +1,620 @@
+/* =========================================================
+   MioMtFWiki Components
+========================================================= */
+
+/* =========================================================
+   Hero
+========================================================= */
+
+.VPHero {
+  position: relative;
+  overflow: hidden;
+}
+
+/* =========================================================
+   Hero Background Glow
+========================================================= */
+
+.VPHero::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+
+    radial-gradient(
+      circle at 80% 30%,
+      rgba(91,206,250,.06),
+      transparent 45%
+    ),
+
+    radial-gradient(
+      circle at 15% 70%,
+      rgba(91,206,250,.04),
+      transparent 50%
+    );
+
+  filter: blur(80px);
+
+  animation:
+    mio-bg-float
+    20s
+    ease-in-out
+    infinite;
+}
+
+/* =========================================================
+   Logo
+========================================================= */
+
+.VPHero .name {
+
+  font-family:
+    "HarmonyOS Sans";
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    -0.04em;
+
+  position:
+    relative;
+
+  z-index:
+    2;
+
+  background:
+
+    linear-gradient(
+      90deg,
+
+      #E77995 0%,
+
+      #F5A9B8 20%,
+
+      #F8C4D0 35%,
+
+      #a4e5ff 50%,
+
+      #F8C4D0 65%,
+
+      #F5A9B8 80%,
+
+      #E77995 100%
+    );
+
+  background-size:
+    250% 100%;
+
+  -webkit-background-clip:
+    text;
+
+  -webkit-text-fill-color:
+    transparent;
+
+  animation:
+
+    mio-title-enter .8s
+    cubic-bezier(.22,1,.36,1),
+
+    mio-shimmer 8s
+    linear
+    infinite;
+
+  filter:
+
+    drop-shadow(
+      0 0 6px
+      rgba(245,169,184,.08)
+    );
+}
+
+/* =========================================================
+   Hero Subtitle
+========================================================= */
+
+.VPHero .text {
+
+  position:
+    relative;
+
+  z-index:
+    2;
+
+  font-weight:
+    700;
+}
+
+.VPHero .tagline {
+
+  position:
+    relative;
+
+  z-index:
+    2;
+
+  color:
+    var(--vp-c-text-2);
+}
+
+/* =========================================================
+   Hero Buttons
+========================================================= */
+
+.VPButton.brand {
+
+  background:
+    linear-gradient(
+      135deg,
+      #F5A9B8,
+      #E77995
+    );
+
+  border:
+    none;
+
+  box-shadow:
+    0 4px 16px
+    rgba(231,121,149,.25);
+}
+
+.VPButton.brand:hover {
+
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 8px 24px
+    rgba(231,121,149,.35);
+}
+
+.VPButton.alt:hover {
+
+  border-color:
+    #F5A9B8;
+
+  color:
+    #F5A9B8;
+}
+
+/* =========================================================
+   Feature Cards
+========================================================= */
+
+.VPFeature {
+
+  border-radius:
+    var(--mio-radius-lg);
+
+  border:
+    1px solid
+    var(--vp-c-border);
+
+  transition:
+    all .25s ease;
+
+  backdrop-filter:
+    blur(8px);
+}
+
+.VPFeature:hover {
+
+  transform:
+    translateY(-3px);
+
+  border-color:
+    #F5A9B8;
+
+  box-shadow:
+    0 12px 32px
+    rgba(245,169,184,.10);
+}
+
+/* =========================================================
+   Headings
+========================================================= */
+
+.vp-doc h1 {
+
+  border: none;
+
+  padding: 0;
+
+  margin-bottom: 1rem;
+
+  font-weight: 800;
+}
+
+.vp-doc h2 {
+
+  border: none;
+
+  padding: 0;
+
+  margin-top: 2rem;
+
+  margin-bottom: .8rem;
+
+  font-weight: 700;
+}
+
+.vp-doc h3 {
+
+  color: var(--vp-c-text-1);
+
+  font-weight: 600;
+}
+
+/* =========================================================
+   Links
+========================================================= */
+
+.vp-doc a {
+
+  position:
+    relative;
+
+  text-decoration:
+    none;
+}
+
+.vp-doc a::after {
+
+  content:
+    "";
+
+  position:
+    absolute;
+
+  left:
+    0;
+
+  bottom:
+    -2px;
+
+  width:
+    100%;
+
+  height:
+    1px;
+
+  background:
+    currentColor;
+
+  transform:
+    scaleX(0);
+
+  transform-origin:
+    left;
+
+  transition:
+    transform .18s ease;
+}
+
+.vp-doc a:hover::after {
+
+  transform:
+    scaleX(1);
+}
+
+/* =========================================================
+   Blockquote
+========================================================= */
+
+.vp-doc blockquote {
+
+  border-left:
+    4px solid
+    var(--vp-c-brand-1);
+
+  background:
+    rgba(245,169,184,.05);
+
+  border-radius:
+    0 10px 10px 0;
+
+  padding:
+    .8rem 1rem;
+}
+
+/* =========================================================
+   Inline Code
+========================================================= */
+
+.vp-doc :not(pre) > code {
+
+  color:
+    #D85D86;
+
+  background:
+    rgba(245,169,184,.10);
+
+  border-radius:
+    6px;
+
+  padding:
+    .15rem .4rem;
+}
+
+/* =========================================================
+   Code Blocks
+========================================================= */
+
+div[class*="language-"] {
+
+  border-radius:
+    14px;
+
+  border:
+    1px solid
+    var(--vp-c-border);
+
+  overflow:
+    hidden;
+}
+
+/* =========================================================
+   Tables
+========================================================= */
+
+.vp-doc table {
+
+  border-radius:
+    12px;
+
+  overflow:
+    hidden;
+}
+
+.vp-doc tr:nth-child(even) {
+
+  background:
+    rgba(245,169,184,.03);
+}
+
+/* =========================================================
+   Animations
+========================================================= */
+
+@keyframes mio-title-enter {
+
+  from {
+
+    opacity:
+      0;
+
+    transform:
+      translateY(12px);
+
+    letter-spacing:
+      .15em;
+  }
+
+  to {
+
+    opacity:
+      1;
+
+    transform:
+      translateY(0);
+
+    letter-spacing:
+      -.04em;
+  }
+}
+
+@keyframes mio-shimmer {
+
+  from {
+
+    background-position:
+      0% center;
+  }
+
+  to {
+
+    background-position:
+      250% center;
+  }
+}
+
+@keyframes mio-bg-float {
+
+  0% {
+
+    transform:
+      translate3d(
+        0,
+        0,
+        0
+      )
+      scale(1);
+  }
+
+  50% {
+
+    transform:
+      translate3d(
+        0,
+        -10px,
+        0
+      )
+      scale(1.03);
+  }
+
+  100% {
+
+    transform:
+      translate3d(
+        0,
+        0,
+        0
+      )
+      scale(1);
+  }
+}
+
+/* =========================================================
+   Wiki Definition Cards
+========================================================= */
+
+.vp-doc .custom-block.info {
+
+  position: relative;
+
+  overflow: hidden;
+
+  margin: 1.25rem 0;
+
+  padding: 1rem 1.2rem 1rem 1.4rem;
+
+  border: 1px solid var(--vp-c-border);
+
+  border-radius: 16px;
+
+  background:
+    rgba(255,255,255,.02);
+
+  backdrop-filter:
+    blur(10px);
+
+  transition:
+    all .22s ease;
+}
+
+/* 左侧知识标识线 */
+
+.vp-doc .custom-block.info::before {
+
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  top: 0;
+
+  bottom: 0;
+
+  width: 3px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #F5A9B8,
+      #E77995
+    );
+}
+
+/* 右上角淡光 */
+
+.vp-doc .custom-block.info::after {
+
+  content: "";
+
+  position: absolute;
+
+  width: 180px;
+
+  height: 180px;
+
+  right: -90px;
+
+  top: -90px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(245,169,184,.08),
+      transparent 70%
+    );
+
+  pointer-events: none;
+}
+
+/* Hover */
+
+.vp-doc .custom-block.info:hover {
+
+  border-color:
+    rgba(245,169,184,.25);
+
+  box-shadow:
+    0 8px 30px rgba(245,169,184,.08);
+
+  transform:
+    translateY(-1px);
+}
+
+/* 标题 */
+
+.vp-doc .custom-block.info .custom-block-title {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: .55rem;
+
+  margin-bottom: .65rem;
+
+  font-size: 1rem;
+
+  font-weight: 700;
+
+  color: var(--vp-c-text-1);
+}
+
+.vp-doc .custom-block.info .custom-block-title::before {
+
+  content: "";
+
+  width: 8px;
+
+  height: 8px;
+
+  border-radius: 50%;
+
+  background:
+    #F5A9B8;
+
+  box-shadow:
+    0 0 12px rgba(245,169,184,.45);
+}
+
+/* 内容 */
+
+.vp-doc .custom-block.info p {
+
+  margin: 0;
+
+  color:
+    var(--vp-c-text-2);
+
+  line-height: 1.9;
+}
+
+/* 深色模式 */
+
+.dark .vp-doc .custom-block.info {
+
+  background:
+    rgba(255,255,255,.015);
+
+  border-color:
+    rgba(255,255,255,.06);
+}
+
+.dark .vp-doc .custom-block.info:hover {
+
+  border-color:
+    rgba(245,169,184,.18);
+}

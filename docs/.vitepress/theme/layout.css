@@ -1,0 +1,39 @@
+.VPContent {
+
+  background:
+    var(--vp-c-bg);
+}
+
+.VPDoc {
+
+  max-width: 860px;
+}
+
+.vp-doc {
+
+  line-height: 1.8;
+}
+
+.vp-doc p {
+
+  margin:
+    1rem 0;
+}
+
+.vp-doc ul,
+.vp-doc ol {
+
+  line-height: 1.8;
+}
+
+.vp-doc img {
+
+  border-radius:
+    var(--mio-radius-md);
+}
+
+.VPSidebar {
+
+  background:
+    var(--vp-c-bg-alt);
+}

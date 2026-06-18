@@ -1,0 +1,113 @@
+/* HarmonyOS Sans */
+
+@font-face {
+  font-family: "HarmonyOS Sans";
+  src: url("/fonts/HarmonyOS_Sans_SC_Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HarmonyOS Sans";
+  src: url("/fonts/HarmonyOS_Sans_SC_Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HarmonyOS Sans";
+  src: url("/fonts/HarmonyOS_Sans_SC_Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HarmonyOS Sans";
+  src: url("/fonts/HarmonyOS_Sans_SC_Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HarmonyOS Sans";
+  src: url("/fonts/HarmonyOS_Sans_SC_Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HarmonyOS Sans";
+  src: url("/fonts/HarmonyOS_Sans_SC_Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+:root {
+
+  --vp-font-family-base:
+    "HarmonyOS Sans",
+    "Segoe UI",
+    "Microsoft YaHei",
+    sans-serif;
+
+  --vp-font-family-mono:
+    "Maple Mono",
+    "Cascadia Code",
+    "JetBrains Mono",
+    monospace;
+}
+
+/* H1 */
+
+.vp-doc h1 {
+  font-weight: 700;
+}
+
+/* H2 */
+
+.vp-doc h2 {
+  font-weight: 600;
+}
+
+/* H3 */
+
+.vp-doc h3 {
+  font-weight: 600;
+}
+
+/* Sidebar */
+
+.VPSidebar {
+  font-weight: 500;
+}
+
+/* Navbar */
+
+.VPNavBar {
+  font-weight: 500;
+}
+
+.VPHero .name {
+
+  font-family:
+    "HarmonyOS Sans";
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    -0.03em;
+}
+
+/* Code Block Font */
+
+.vp-doc pre,
+.vp-doc code,
+.vp-code-group,
+div[class*="language-"] {
+  font-family:
+    "HarmonyOS Sans",
+    "Segoe UI",
+    "Microsoft YaHei",
+    sans-serif !important;
+}

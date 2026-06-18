@@ -1,0 +1,304 @@
+/**
+ * animation.css
+ * MioMtFWiki — 动效原则：
+ * 1. 服务阅读，不打扰阅读。Wiki 是用来查资料的，不是用来"逛"的。
+ * 2. 禁止跳变：所有可感知的状态变化都必须有过渡，但过渡要快、要安静。
+ * 3. 统一节奏：全站只用一套 easing / duration token，不允许每个组件发明自己的曲线。
+ * 4. 尊重 prefers-reduced-motion。
+ */
+
+:root {
+  /* ---- 统一时间节奏 ---- */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);   /* 通用：淡入淡出、颜色过渡 */
+  --ease-out-soft: cubic-bezier(0.16, 1, 0.3, 1);  /* 进入动画：快起步、慢停，无回弹 */
+  --ease-in-soft: cubic-bezier(0.7, 0, 0.84, 0);   /* 退出动画 */
+
+  --dur-instant: 100ms;   /* hover、按下反馈 */
+  --dur-fast: 160ms;      /* 链接颜色、边框、小型 UI 反馈 */
+  --dur-base: 220ms;      /* 卡片、按钮、常规过渡 */
+  --dur-slow: 360ms;      /* 页面级、模态、较大面积变化 */
+
+  /* 位移幅度：克制，不做大幅度滑入 */
+  --shift-xs: 2px;
+  --shift-sm: 6px;
+  --shift-md: 12px;
+}
+
+/* =========================================================
+   0. 全局基线：任何颜色 / 边框 / 阴影变化默认都有过渡
+   防止深浅色模式切换、hover 状态出现生硬跳变
+   ========================================================= */
+
+a,
+button,
+.vp-doc a,
+.VPButton,
+.VPLink,
+.VPNavBarMenuLink,
+.VPSidebarItem,
+.VPNavBarSearchButton,
+.VPSwitch,
+input,
+textarea {
+  transition:
+    color var(--dur-fast) var(--ease-standard),
+    background-color var(--dur-fast) var(--ease-standard),
+    border-color var(--dur-fast) var(--ease-standard),
+    box-shadow var(--dur-fast) var(--ease-standard),
+    opacity var(--dur-fast) var(--ease-standard),
+    transform var(--dur-fast) var(--ease-standard);
+}
+
+/* 深色 / 浅色模式整体切换：背景与文字平滑过渡，不是闪烁切换 */
+html,
+body,
+.VPNav,
+.VPSidebar,
+.VPContent,
+.vp-doc {
+  transition:
+    background-color var(--dur-base) var(--ease-standard),
+    color var(--dur-base) var(--ease-standard);
+}
+
+/* =========================================================
+   1. 页面进入：正文区域统一的轻微淡入 + 上移
+   幅度很小（--shift-sm），目的是"出现感"而不是"飞入感"
+   ========================================================= */
+
+.vp-doc {
+  animation: page-enter var(--dur-slow) var(--ease-out-soft) both;
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(var(--shift-sm));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 侧边栏与大纲跟随正文，但延迟更短、幅度更小，避免和正文抢节奏 */
+.VPSidebar,
+.VPDocAsideOutline {
+  animation: aside-enter var(--dur-base) var(--ease-out-soft) both;
+}
+
+@keyframes aside-enter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* =========================================================
+   2. 链接与正文交互反馈
+   Wiki 里链接极多（"问题→链接→解决"是核心传播路径），
+   反馈必须干净、即时、不花哨
+   ========================================================= */
+
+.vp-doc a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.vp-doc a:hover {
+  opacity: 0.78;
+}
+
+.vp-doc a:active {
+  transition-duration: var(--dur-instant);
+  opacity: 0.6;
+}
+
+/* 锚点跳转（点击标题旁的 # 链接）淡入提示，不做位移 */
+.header-anchor {
+  transition: opacity var(--dur-fast) var(--ease-standard);
+}
+
+/* =========================================================
+   3. 卡片类组件（首页 features、自定义容器）
+   hover 只做"提升感"，不做缩放跳跃
+   ========================================================= */
+
+/* 注意：.VPFeature 本身是无样式的包裹层（链接 + flex），
+   真正显示边框/背景/padding 的是内层 .box。
+   默认主题给 .box 的 hover 边框变化是 scoped 样式，
+   优先级高于外部样式，必须直接作用在 .box 上才能统一过渡节奏，
+   否则会出现"外层位移丝滑、内层边框跳变"的撕裂感。 */
+.VPFeature .box,
+.vp-doc .custom-block {
+  transition:
+    transform var(--dur-base) var(--ease-out-soft),
+    box-shadow var(--dur-base) var(--ease-standard),
+    border-color var(--dur-base) var(--ease-standard) !important;
+}
+
+.VPFeature:hover .box {
+  transform: translateY(calc(-1 * var(--shift-xs)));
+  box-shadow: 0 8px 24px -12px rgba(0, 0, 0, 0.18);
+}
+
+/* 外层不再单独做 transform，避免双层各自动画导致的错位 */
+.VPFeature {
+  transition: none;
+}
+
+/* =========================================================
+   4. 按钮 / 开关（深色模式切换按钮、导航按钮）
+   按下要有"被按到"的真实手感：极短时间、轻微下沉
+   ========================================================= */
+
+.VPButton,
+.VPSwitchAppearance,
+.VPNavBarSearchButton {
+  transition:
+    transform var(--dur-instant) var(--ease-standard),
+    background-color var(--dur-fast) var(--ease-standard),
+    border-color var(--dur-fast) var(--ease-standard),
+    box-shadow var(--dur-fast) var(--ease-standard) !important;
+}
+
+.VPButton:active,
+.VPSwitchAppearance:active {
+  transform: translateY(1px);
+  transition-duration: var(--dur-instant);
+}
+
+/* 深色模式切换的太阳/月亮图标过渡：旋转 + 淡入淡出，不做弹跳 */
+.VPSwitchAppearance .check {
+  transition: transform var(--dur-base) var(--ease-standard);
+}
+
+/* =========================================================
+   5. 侧边栏展开 / 折叠（目录树）
+   高度变化用 grid-template-rows 技巧实现平滑展开，
+   避免 height: auto 导致的瞬间跳变
+   ========================================================= */
+
+.VPSidebarItem.collapsible .items {
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--dur-base) var(--ease-standard);
+}
+
+.VPSidebarItem.collapsible.is-not-collapsed > .items {
+  grid-template-rows: 1fr;
+}
+
+.VPSidebarItem .caret-icon {
+  transition: transform var(--dur-base) var(--ease-standard);
+}
+
+/* =========================================================
+   6. 移动端导航菜单（汉堡菜单）滑出
+   幅度克制，遵循"出现感"原则
+   ========================================================= */
+
+.VPNavScreen {
+  transition:
+    opacity var(--dur-base) var(--ease-standard),
+    background-color var(--dur-base) var(--ease-standard);
+}
+
+.VPNavScreenMenu {
+  transition: transform var(--dur-base) var(--ease-out-soft);
+}
+
+/* =========================================================
+   7. 搜索弹窗（本地搜索 / Algolia）
+   弹出要快，关闭要更快——避免挡住用户找答案的路径
+   ========================================================= */
+
+div[class*='DocSearch-Modal'],
+.VPLocalSearchBox {
+  animation: search-enter var(--dur-fast) var(--ease-out-soft) both;
+}
+
+@keyframes search-enter {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* =========================================================
+   8. 自定义容器（tip / warning / danger）入场
+   用于"要注意"板块，强调内容时轻微提示，不抢正文节奏
+   ========================================================= */
+
+.vp-doc .custom-block.tip,
+.vp-doc .custom-block.warning,
+.vp-doc .custom-block.danger {
+  animation: callout-enter var(--dur-base) var(--ease-out-soft) both;
+}
+
+@keyframes callout-enter {
+  from {
+    opacity: 0;
+    transform: translateX(calc(-1 * var(--shift-xs)));
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* =========================================================
+   9. 返回顶部 / 阅读进度条（如使用）
+   匀速、无 easing 跳动，因为它代表的是客观的滚动进度
+   ========================================================= */
+
+.reading-progress-bar {
+  transition: transform var(--dur-instant) linear;
+}
+
+.back-to-top {
+  transition:
+    opacity var(--dur-fast) var(--ease-standard),
+    transform var(--dur-fast) var(--ease-out-soft);
+}
+
+.back-to-top.is-hidden {
+  opacity: 0;
+  transform: translateY(var(--shift-xs));
+  pointer-events: none;
+}
+
+/* =========================================================
+   10. 平滑滚动（点击目录 / 锚点跳转）
+   ========================================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* =========================================================
+   11. 无障碍：尊重用户的"减少动效"系统设置
+   这条优先级最高，放在最后用于覆盖以上所有动画
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}

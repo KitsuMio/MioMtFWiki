@@ -1,0 +1,108 @@
+.dark {
+
+  --vp-c-brand-1:
+    #F08AA9;
+
+  --vp-c-brand-2:
+    #F5A9B8;
+
+  --vp-c-brand-3:
+    #FFD0DA;
+
+  --vp-c-brand-soft:
+    rgba(240,138,169,.16);
+
+  --vp-c-tip-1:
+    #7DD3FC;
+
+  --vp-c-bg:
+    #0F172A;
+
+  --vp-c-bg-alt:
+    #172033;
+
+  --vp-c-bg-soft:
+    #1E293B;
+
+  --vp-c-bg-elv:
+    #243041;
+
+  --vp-c-text-1:
+    #F8FAFC;
+
+  --vp-c-text-2:
+    #CBD5E1;
+
+  --vp-c-text-3:
+    #94A3B8;
+
+  --vp-c-border:
+    #334155;
+
+  --vp-c-divider:
+    #334155;
+
+  --vp-code-bg:
+    #111827;
+}
+
+/* Sidebar */
+
+.dark .VPSidebar {
+
+  background:
+    #172033;
+}
+
+/* Navbar */
+
+.dark .VPNavBar {
+
+  background:
+    rgba(
+      15,
+      23,
+      42,
+      .8
+    );
+
+  backdrop-filter:
+    blur(16px);
+}
+
+/* Feature */
+
+.dark .VPFeature {
+
+  background:
+    #1E293B;
+
+  border:
+    1px solid
+    #334155;
+}
+
+/* Code */
+
+.dark div[class*="language-"] {
+
+  background:
+    #111827;
+
+  border:
+    1px solid
+    #334155;
+}
+
+/* Blockquote */
+
+.dark .vp-doc blockquote {
+
+  background:
+    rgba(
+      240,
+      138,
+      169,
+      .08
+    );
+}

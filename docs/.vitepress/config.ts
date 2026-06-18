@@ -16,9 +16,9 @@ export default defineConfig({
         text: '目录',
         items: [
           { text: '首页', link: '/' },
+          { text: 'HRT入门', link: '/hrt-start' },
           { text: '我怀疑自己是MtF，该做什么？', link: '/first-step' },
           { text: '概念与术语', link: '/concepts' },
-          { text: 'HRT入门', link: '/hrt-start' },
           { text: '常见刻板印象与误解', link: '/stereotypes' },
         ]
       }

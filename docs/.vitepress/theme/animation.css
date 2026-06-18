@@ -302,3 +302,40 @@ html {
     scroll-behavior: auto;
   }
 }
+
+/* =========================================================
+   Hero Actions
+   ========================================================= */
+
+.VPHero .actions .VPButton {
+  transition:
+    transform var(--dur-base) var(--ease-out-soft),
+    box-shadow var(--dur-base) var(--ease-standard),
+    border-color var(--dur-base) var(--ease-standard),
+    background-color var(--dur-base) var(--ease-standard);
+}
+
+.VPHero .actions .VPButton:hover {
+  transform: translateY(calc(-1 * var(--shift-xs)));
+}
+
+.VPHero .actions .VPButton.brand:hover {
+  box-shadow:
+    0 12px 32px rgba(231,121,149,.35);
+}
+
+.VPHero .actions .VPButton.alt:hover {
+  box-shadow:
+    0 12px 32px rgba(245,169,184,.12);
+}
+
+.dark .VPHero .actions .VPButton.brand:hover {
+  box-shadow:
+    0 0 24px rgba(245,169,184,.28),
+    0 12px 32px rgba(245,169,184,.18);
+}
+
+.dark .VPHero .actions .VPButton.alt:hover {
+  box-shadow:
+    0 0 20px rgba(125,211,252,.18);
+}

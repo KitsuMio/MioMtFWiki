@@ -53,3 +53,14 @@ MioMtFWiki 希望改变这一现状。
 
 > [!info] 本站理念
 > 知识不应该只是存在，而应该真正传到需要它的人手上。
+
+---
+
+## 社区交流
+
+MioMtFWiki 不只是一个知识库，也欢迎加入社区参与讨论、反馈错误和提交内容。
+
+- 📢 Telegram 频道：<https://t.me/MioMtFWiki>
+- 💬 Telegram 群组：<https://t.me/MioMtFWikiGroup>
+
+如果发现错误、内容过时或有新的问题值得收录，也欢迎在群组中提出。

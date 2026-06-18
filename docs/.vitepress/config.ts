@@ -5,6 +5,9 @@ export default defineConfig({
   title: "MioMtFWiki",
   description: "来自社区、服务社区的现代跨性别知识库",
   base: '/MioMtFWiki/',
+    markdown: {
+    breaks: true
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [

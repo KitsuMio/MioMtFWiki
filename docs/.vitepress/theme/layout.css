@@ -37,3 +37,9 @@
   background:
     var(--vp-c-bg-alt);
 }
+
+@media (max-width: 767px) {
+  .vp-doc {
+    padding: 0 4px;
+  }
+}

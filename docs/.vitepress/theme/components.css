@@ -357,6 +357,12 @@ div[class*="language-"] {
 
   overflow:
     hidden;
+
+  /* 覆盖 VitePress 官方默认：移动端代码块用 margin: 16px -24px
+     让内容满宽贴边、且不带圆角（640px 以上才收回 margin）。
+     既然这里所有宽度下都要圆角和边框，必须把 margin 收回来，
+     否则圆角盒子会被那个负 margin 顶到容器边缘外面去。 */
+  margin: 16px 0;
 }
 
 /* =========================================================
@@ -370,6 +376,28 @@ div[class*="language-"] {
 
   overflow:
     hidden;
+
+  /* 关键修复：官方默认 table 用 border-collapse: collapse，
+     单元格边框直接画在表格的外边界上，把这里设置的
+     border-radius 整个切穿——圆角设了但视觉上完全看不出来。
+     改成 separate 后边框退回单元格内部，圆角才会真正生效。 */
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--vp-c-border);
+}
+
+/* border-collapse 改为 separate 后，相邻单元格各自的边框会
+   叠加变粗（两条线挨在一起），这里去掉单元格自身横向边框，
+   只保留行与行之间的分隔线，视觉上更接近原来的效果 */
+.vp-doc th,
+.vp-doc td {
+  border: none;
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+.vp-doc tr:last-child th,
+.vp-doc tr:last-child td {
+  border-bottom: none;
 }
 
 .vp-doc tr:nth-child(even) {

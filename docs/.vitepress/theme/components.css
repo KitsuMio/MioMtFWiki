@@ -115,10 +115,13 @@
     infinite;
 
   filter:
-
     drop-shadow(
-      0 0 6px
-      rgba(245,169,184,.08)
+      0 0 12px
+      rgba(245,169,184,.25)
+    )
+    drop-shadow(
+      0 0 32px
+      rgba(245,169,184,.15)
     );
 }
 

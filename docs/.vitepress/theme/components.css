@@ -76,19 +76,26 @@
 
       #E77995 0%,
 
-      #F5A9B8 20%,
+      #F5A9B8 16%,
 
-      #F8C4D0 35%,
+      #F8C4D0 28%,
+
+      #cde0ff 40%,
 
       #a4e5ff 50%,
 
-      #F8C4D0 65%,
+      #cde0ff 60%,
 
-      #F5A9B8 80%,
+      #F8C4D0 72%,
+
+      #F5A9B8 84%,
 
       #E77995 100%
     );
 
+  /* 渐变首尾色完全相同(#E77995 0% / 100%),
+     本身就是一个可无缝衔接的"循环图块"。
+     background-size 决定这个图块被拉伸到多宽。 */
   background-size:
     250% 100%;
 
@@ -103,7 +110,7 @@
     mio-title-enter .8s
     cubic-bezier(.22,1,.36,1),
 
-    mio-shimmer 8s
+    mio-shimmer 10s
     linear
     infinite;
 
@@ -443,6 +450,15 @@ div[class*="language-"] {
 
 @keyframes mio-shimmer {
 
+  /* 关键修复:background-size 是 250%(即 N=2.5),
+     要让 background-position 的位移正好等于"一个完整
+     渐变图块"的宽度,位移量必须是 100% × N / (N-1)
+     = 100% × 2.5 / 1.5 ≈ 166.6667%,而不是直觉上的 250%。
+     之前用 250% 相当于多移动了半个图块,导致循环到
+     结尾时画面发生肉眼可见的瞬移跳帧。改成精确值后,
+     动画结束的最后一帧在像素上与第一帧完全重合,
+     循环时不会再有任何跳动,流光会无限丝滑地滚动下去。 */
+
   from {
 
     background-position:
@@ -452,7 +468,7 @@ div[class*="language-"] {
   to {
 
     background-position:
-      250% center;
+      166.6667% center;
   }
 }
 

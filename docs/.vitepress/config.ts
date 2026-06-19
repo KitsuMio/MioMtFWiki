@@ -5,7 +5,17 @@ export default defineConfig({
   title: "MioMtFWiki",
   description: "来自社区、服务社区的现代跨性别知识库",
   base: '/MioMtFWiki/',
-    markdown: {
+  head: [
+    [
+      'script',
+      {
+        defer: '',
+        src: 'https://cloud.umami.is/script.js',
+        'data-website-id': 'e9c4e9f5-3b93-42fc-97e4-52f0ebb4884b'
+      }
+    ]
+  ],
+  markdown: {
     breaks: true
   },
   themeConfig: {

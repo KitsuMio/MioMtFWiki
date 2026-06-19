@@ -33,6 +33,7 @@ export default defineConfig({
           { text: '我怀疑自己是MtF，该做什么？', link: '/first-step' },
           { text: '概念与术语', link: '/concepts' },
           { text: '常见刻板印象与误解', link: '/stereotypes' },
+          { text: '高频问题', link: '/faq' },
         ]
       }
     ],

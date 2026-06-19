@@ -74,3 +74,4 @@
 - [HRT 入门](./hrt-start)
 - [概念与术语](./concepts)
 - [常见刻板印象与误解](./stereotypes)
+- [高频问题](./faq)

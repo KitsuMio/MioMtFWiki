@@ -64,7 +64,7 @@
 
 ---
 
-## HRT 相关
+## HRT 相关 {#hrt-related}
 
 ::: info HRT（Hormone Replacement Therapy）
 

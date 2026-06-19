@@ -1,62 +1,188 @@
+/* -------------------------
+ * 字体导入
+ * ------------------------- */
+
 @import url("https://cdn.jsdelivr.net/npm/cn-fontsource-source-han-serif-sc-vf/font.css");
+@import url("https://cdn.jsdelivr.net/npm/harmonyos-sans-sc-webfont-splitted@1.1.0/dist/index.min.css");
+
+/* -------------------------
+ * 字体变量
+ * ------------------------- */
 
 :root {
+  /* 正文、代码 */
   --vp-font-family-base:
+    "HarmonyOS Sans SC",
+    sans-serif;
+
+  /* 标题 */
+  --vp-font-family-heading:
     "Source Han Serif SC VF",
-    "Source Han Serif SC",
-    "Noto Serif SC",
     serif;
 }
 
-/* 全站正文 */
+/* -------------------------
+ * 默认正文（HarmonyOS Sans SC）
+ * ------------------------- */
 
 html,
 body,
 #app,
-.VPApp {
+.VPApp,
+.vp-doc {
   font-family: var(--vp-font-family-base);
 }
 
-/* Hero */
+/* -------------------------
+ * Markdown 标题（宋体）
+ * ------------------------- */
 
-.VPHero,
-.VPHero * {
-  font-family: var(--vp-font-family-base) !important;
+.vp-doc h1,
+.vp-doc h2,
+.vp-doc h3,
+.vp-doc h4,
+.vp-doc h5,
+.vp-doc h6 {
+  font-family: var(--vp-font-family-heading) !important;
+  font-weight: 700;
 }
 
-/* Navbar */
+/* -------------------------
+ * Hero（宋体）
+ * ------------------------- */
+
+.VPHero .name,
+.VPHero .text,
+.VPHero .tagline,
+.VPHero h1,
+.VPHero h2 {
+  font-family: var(--vp-font-family-heading) !important;
+}
+
+/* -------------------------
+ * Navbar（宋体）
+ * ------------------------- */
 
 .VPNav,
 .VPNav * {
-  font-family: var(--vp-font-family-base) !important;
+  font-family: var(--vp-font-family-heading) !important;
 }
 
-/* Sidebar */
+/* -------------------------
+ * Sidebar（宋体）
+ * ------------------------- */
 
 .VPSidebar,
 .VPSidebar * {
+  font-family: var(--vp-font-family-heading) !important;
+}
+
+/* -------------------------
+ * Feature 卡片标题（宋体）
+ * ------------------------- */
+
+.VPFeature .title,
+.custom-block-title,
+.details summary {
+  font-family: var(--vp-font-family-heading) !important;
+}
+
+/* -------------------------
+ * 普通正文（HarmonyOS Sans SC）
+ * ------------------------- */
+
+.vp-doc p,
+.vp-doc li,
+.vp-doc ul,
+.vp-doc ol,
+.vp-doc blockquote,
+.vp-doc strong,
+.vp-doc em {
   font-family: var(--vp-font-family-base) !important;
 }
 
-/* Markdown */
+/* -------------------------
+ * 表格（HarmonyOS Sans SC）
+ * ------------------------- */
 
-.vp-doc,
-.vp-doc * {
+.vp-doc table,
+.vp-doc thead,
+.vp-doc tbody,
+.vp-doc tr,
+.vp-doc th,
+.vp-doc td {
   font-family: var(--vp-font-family-base) !important;
 }
 
-/* 搜索框 */
+/* -------------------------
+ * Info / Tip / Warning 等内容（HarmonyOS Sans SC）
+ * ------------------------- */
+
+.custom-block,
+.custom-block * {
+  font-family: var(--vp-font-family-base) !important;
+}
+
+/* 标题保持宋体 */
+
+.custom-block-title {
+  font-family: var(--vp-font-family-heading) !important;
+}
+
+/* -------------------------
+ * 搜索框（HarmonyOS Sans SC）
+ * ------------------------- */
 
 .DocSearch,
 .DocSearch * {
   font-family: var(--vp-font-family-base) !important;
 }
 
-/* 输入组件 */
+/* -------------------------
+ * 输入组件（HarmonyOS Sans SC）
+ * ------------------------- */
 
 input,
 textarea,
 button,
 select {
+  font-family: var(--vp-font-family-base) !important;
+}
+
+/* -------------------------
+ * 行内代码与代码块（HarmonyOS Sans SC）
+ * ------------------------- */
+
+code,
+pre,
+kbd,
+samp,
+div[class*="language-"],
+div[class*="language-"] pre,
+div[class*="language-"] code,
+.shiki,
+.shiki * {
+  font-family: var(--vp-font-family-base) !important;
+}
+
+/* -------------------------
+ * 首页 Actions 按钮（宋体）
+ * ------------------------- */
+
+.VPButton,
+.VPButton * {
+  font-family: var(--vp-font-family-heading) !important;
+}
+
+/* -------------------------
+ * 首页 Features 区域
+ * 标题宋体，内容HarmonyOS Sans SC
+ * ------------------------- */
+
+.VPFeature .title {
+  font-family: var(--vp-font-family-heading) !important;
+}
+
+.VPFeature .details {
   font-family: var(--vp-font-family-base) !important;
 }

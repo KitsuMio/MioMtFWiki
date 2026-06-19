@@ -166,12 +166,12 @@ div[class*="language-"] code,
 }
 
 /* -------------------------
- * 首页 Actions 按钮（宋体）
+ * 首页 Actions 按钮（HarmonyOS Sans SC）
  * ------------------------- */
 
 .VPButton,
 .VPButton * {
-  font-family: var(--vp-font-family-heading) !important;
+  font-family: var(--vp-font-family-base) !important;
 }
 
 /* -------------------------

@@ -1,11 +1,11 @@
-@import url("https://cdn.jsdelivr.net/npm/harmonyos-sans-sc-webfont-splitted@1.1.0/dist/index.min.css");
+@import url("https://cdn.jsdelivr.net/npm/cn-fontsource-source-han-serif-sc-vf/font.css");
 
 :root {
   --vp-font-family-base:
-    "HarmonyOS Sans SC",
-    "Microsoft YaHei",
-    "Segoe UI",
-    sans-serif;
+    "Source Han Serif SC VF",
+    "Source Han Serif SC",
+    "Noto Serif SC",
+    serif;
 }
 
 /* 全站正文 */

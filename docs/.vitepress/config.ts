@@ -34,7 +34,8 @@ export default defineConfig({
           { text: '概念与术语', link: '/concepts' },
           { text: '常见刻板印象与误解', link: '/stereotypes' },
           { text: '高频问题', link: '/faq' },
-          { text: '关于 AI 与本站内容', link: '/ai-assistance' }
+          { text: '关于 AI 与本站内容', link: '/ai-assistance' },
+          { text: 'MioMtFWiki 与 mtf.wiki 的关系说明', link: '/mio-and-mtfwiki' }
         ]
       }
     ],

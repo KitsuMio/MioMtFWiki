@@ -20,6 +20,9 @@ hero:
       text: 刻板印象与误解
       link: /stereotypes
     - theme: alt
+      text: 激素抽血化验指南
+      link: /hormone-testing-guide
+    - theme: alt
       text: 高频问题
       link: /faq
     - theme: alt
@@ -63,6 +66,7 @@ MioMtFWiki 希望改变这一现状。
 - [HRT 入门](./hrt-start)：药物、剂量区间、怎么吃
 - [概念与术语](./concepts)：MtF / 药娘 / 男娘 / CD / 性别认同 / 表达 / 取向的区别等概念科普
 - [常见刻板印象与误解](./stereotypes)：HRT 会不会毁身体？跨性别是性癖吗？
+- [激素抽血化验指南](./hormone-testing-guide)：怎么去查雌二醇、睾酮、泌乳素等激素水平，以及怎么看懂报告单
 - [现实生活](#)：应不应该和父母聊、怎么和父母聊、怎么藏药（待收录）
 - [高频问题](./faq)：持续更新，来自社区正在问的问题
 - [社群争议](./controversies)：社群内长期存在分歧、反复被讨论但尚无统一共识的话题

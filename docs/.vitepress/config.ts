@@ -33,6 +33,7 @@ export default defineConfig({
           { text: '我怀疑自己是MtF，该做什么？', link: '/first-step' },
           { text: '概念与术语', link: '/concepts' },
           { text: '常见刻板印象与误解', link: '/stereotypes' },
+          { text: '激素抽血化验指南', link: '/hormone-testing-guide' },
           { text: '高频问题', link: '/faq' },
           { text: '关于 AI 与本站内容', link: '/ai-assistance' },
           { text: '我们与 mtf.wiki 的关系', link: '/mio-and-mtfwiki' },

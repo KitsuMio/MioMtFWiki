@@ -28,6 +28,9 @@ hero:
     - theme: alt
       text: 社群争议
       link: /controversies
+    - theme: alt
+      text: 雌二醇凝胶自制指南
+      link: /diy-estradiol-gel
 
 features:
   - title: ✅ 结论优先
@@ -70,6 +73,7 @@ MioMtFWiki 希望改变这一现状。
 - [现实生活](#)：应不应该和父母聊、怎么和父母聊、怎么藏药（待收录）
 - [高频问题](./faq)：持续更新，来自社区正在问的问题
 - [社群争议](./controversies)：社群内长期存在分歧、反复被讨论但尚无统一共识的话题
+- [雌二醇凝胶自制指南](./diy-estradiol-gel)：采用原料自制雌二醇凝胶的教程
 
 ## 为什么不是另一本教材
 

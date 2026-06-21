@@ -16,7 +16,8 @@ export default defineConfig({
     ]
   ],
   markdown: {
-    breaks: true
+    breaks: true,
+    math: true
   },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
@@ -37,7 +38,8 @@ export default defineConfig({
           { text: '高频问题', link: '/faq' },
           { text: '关于 AI 与本站内容', link: '/ai-assistance' },
           { text: '我们与 mtf.wiki 的关系', link: '/mio-and-mtfwiki' },
-          { text: '社群争议', link: '/controversies' }
+          { text: '社群争议', link: '/controversies' },
+          { text: '雌二醇凝胶自制指南', link: '/diy-estradiol-gel' },
         ]
       }
     ],

@@ -42,4 +42,10 @@
   --mio-radius-md: 14px;
   --mio-radius-lg: 18px;
 
+  /* ========= Paper ========= */
+
+  --mio-paper-1: #FCFAF7;
+  --mio-paper-2: #FBF8F3;
+  --mio-paper-3: #F8F4EE;
+
 }

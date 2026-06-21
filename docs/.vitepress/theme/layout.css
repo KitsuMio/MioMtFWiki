@@ -1,5 +1,13 @@
 .VPContent {
+  background:
+    linear-gradient(
+      180deg,
+      var(--mio-paper-1),
+      var(--mio-paper-2)
+    );
+}
 
+.dark .VPContent {
   background:
     var(--vp-c-bg);
 }

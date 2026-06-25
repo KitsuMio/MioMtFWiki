@@ -40,6 +40,7 @@ export default defineConfig({
           { text: '我们与 mtf.wiki 的关系', link: '/mio-and-mtfwiki' },
           { text: '社群争议', link: '/controversies' },
           { text: '雌二醇凝胶自制指南', link: '/diy-estradiol-gel' },
+          { text: '雌二醇贴片自制指南', link: '/diy-estradiol-stickies' }
         ]
       }
     ],

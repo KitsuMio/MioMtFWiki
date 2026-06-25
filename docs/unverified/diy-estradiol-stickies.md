@@ -136,7 +136,7 @@
 
 贴片的使用相当简单。早餐后，我会刷牙，然后把一片贴片放在舌头上，再将它推到上牙龈前侧，贴在**犬齿与切牙之间**。每天左右交替。
 
-![示意图：贴片位于牙齿上方的位置](images/estradiol-stickies-gum-placement.png)
+![示意图：贴片位于牙齿上方的位置](./images/estradiol-stickies-gum-placement.png)
 
 *示意图：贴片位于牙齿上方的位置。*
 

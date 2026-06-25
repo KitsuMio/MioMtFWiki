@@ -39,12 +39,13 @@ export default defineConfig({
           { text: '关于 AI 与本站内容', link: '/ai-assistance' },
           { text: '我们与 mtf.wiki 的关系', link: '/mio-and-mtfwiki' },
           { text: '社群争议', link: '/controversies' },
+          { text: '雌二醇凝胶自制指南', link: '/diy-estradiol-gel' },
           {
             text: '未经验证的方法',
             link: '/unverified',
             items: [
               {
-                text: '雌二醇凝胶自制指南',
+                text: '雌二醇贴片自制指南',
                 link: '/unverified/diy-estradiol-stickies'
               }
             ]

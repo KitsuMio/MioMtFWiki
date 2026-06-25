@@ -31,9 +31,6 @@ hero:
     - theme: alt
       text: 雌二醇凝胶自制指南
       link: /diy-estradiol-gel
-    - theme: alt
-      text: 雌二醇贴片自制指南
-      link: /diy-estradiol-stickies
 
 features:
   - title: ✅ 结论优先
@@ -77,7 +74,6 @@ MioMtFWiki 希望改变这一现状。
 - [高频问题](./faq)：持续更新，来自社区正在问的问题
 - [社群争议](./controversies)：社群内长期存在分歧、反复被讨论但尚无统一共识的话题
 - [雌二醇凝胶自制指南](./diy-estradiol-gel)：采用原料自制雌二醇凝胶的教程
-- [雌二醇贴片自制指南](./diy-estradiol-stickies)：采用原料自制雌二醇贴片的教程
 
 ## 为什么不是另一本教材
 

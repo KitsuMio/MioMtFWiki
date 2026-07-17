@@ -56,6 +56,11 @@ export default defineConfig({
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/KitsuMio/MioMtFWiki' }
-    ]
+    ],
+
+    editLink: {
+      pattern: 'https://github.com/KitsuMio/MioMtFWiki/edit/main/:fileName',
+      text: '在 GitHub 上编辑此页面'
+    }
   }
 })

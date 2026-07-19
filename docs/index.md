@@ -122,5 +122,6 @@ MioMtFWiki 不只是一个知识库，更依赖社区参与讨论、反馈错误
 
 - 📢 Telegram 频道：<https://t.me/MioMtFWiki>
 - 💬 Telegram 群组：<https://t.me/MioMtFWikiGroup>
+- 🎮 Discord 服务器：<https://discord.com/invite/DfUhMhnrHT>
 
 如果发现错误、内容过时，或者社区里出现了新的说法、新的高频问题值得收录，欢迎在群组中提出——这正是本站保持实时的方式。

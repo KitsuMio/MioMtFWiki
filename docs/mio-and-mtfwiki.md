@@ -139,4 +139,8 @@ Mio 目前没有对应内容——这类信息变动快、地域性强，属于�
 
 *—— MioMtFWiki 维护者*
 
-*社区交流：[Telegram 频道](https://t.me/MioMtFWiki) | [Telegram 群组](https://t.me/MioMtFWikiGroup)*
+*社区交流：*
+
+*- 📢 Telegram 频道：<https://t.me/MioMtFWiki>*
+*- 💬 Telegram 群组：<https://t.me/MioMtFWikiGroup>*
+*- 🎮 Discord 服务器：<https://discord.com/invite/DfUhMhnrHT>*

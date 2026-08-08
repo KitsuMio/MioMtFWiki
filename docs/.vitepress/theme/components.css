@@ -678,7 +678,7 @@ div[class*="language-"] {
 @keyframes mio-mobile-action-enter {
   from {
     opacity: 0;
-    transform: translate3d(8px, 4px, 0);
+    transform: translate3d(14px, 6px, 0) scale(.985);
   }
 
   to {
@@ -695,21 +695,21 @@ div[class*="language-"] {
   }
 
   .VPHero .action {
-    animation: mio-mobile-action-enter .52s var(--mio-mobile-action-delay, .7s) var(--ease-out-soft) both;
+    animation: mio-mobile-action-enter .76s var(--mio-mobile-action-delay, 1.08s) cubic-bezier(.2,.65,.3,1) both;
   }
 
-  .VPHero .action:nth-child(1)  { --mio-mobile-action-delay: .24s; }
-  .VPHero .action:nth-child(2)  { --mio-mobile-action-delay: .285s; }
-  .VPHero .action:nth-child(3)  { --mio-mobile-action-delay: .33s; }
-  .VPHero .action:nth-child(4)  { --mio-mobile-action-delay: .375s; }
-  .VPHero .action:nth-child(5)  { --mio-mobile-action-delay: .42s; }
-  .VPHero .action:nth-child(6)  { --mio-mobile-action-delay: .465s; }
-  .VPHero .action:nth-child(7)  { --mio-mobile-action-delay: .51s; }
-  .VPHero .action:nth-child(8)  { --mio-mobile-action-delay: .555s; }
-  .VPHero .action:nth-child(9)  { --mio-mobile-action-delay: .6s; }
-  .VPHero .action:nth-child(10) { --mio-mobile-action-delay: .645s; }
-  .VPHero .action:nth-child(11) { --mio-mobile-action-delay: .69s; }
-  .VPHero .action:nth-child(12) { --mio-mobile-action-delay: .735s; }
+  .VPHero .action:nth-child(1)  { --mio-mobile-action-delay: .3s; }
+  .VPHero .action:nth-child(2)  { --mio-mobile-action-delay: .37s; }
+  .VPHero .action:nth-child(3)  { --mio-mobile-action-delay: .44s; }
+  .VPHero .action:nth-child(4)  { --mio-mobile-action-delay: .51s; }
+  .VPHero .action:nth-child(5)  { --mio-mobile-action-delay: .58s; }
+  .VPHero .action:nth-child(6)  { --mio-mobile-action-delay: .65s; }
+  .VPHero .action:nth-child(7)  { --mio-mobile-action-delay: .72s; }
+  .VPHero .action:nth-child(8)  { --mio-mobile-action-delay: .79s; }
+  .VPHero .action:nth-child(9)  { --mio-mobile-action-delay: .86s; }
+  .VPHero .action:nth-child(10) { --mio-mobile-action-delay: .93s; }
+  .VPHero .action:nth-child(11) { --mio-mobile-action-delay: 1s; }
+  .VPHero .action:nth-child(12) { --mio-mobile-action-delay: 1.07s; }
 
   .VPHomeFeatures {
     animation: mio-hero-enter .72s .48s var(--ease-out-soft) both;

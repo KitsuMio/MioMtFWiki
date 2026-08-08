@@ -22,6 +22,12 @@
   --shift-xs: 2px;
   --shift-sm: 6px;
   --shift-md: 12px;
+
+  /* Refined motion rhythm: responsive at the start, soft at the landing. */
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --dur-fast: 180ms;
+  --dur-base: 280ms;
+  --dur-slow: 480ms;
 }
 
 /* =========================================================
@@ -70,14 +76,18 @@ body,
   animation: page-enter var(--dur-slow) var(--ease-out-soft) both;
 }
 
+.vp-doc.mio-route-enter {
+  animation: page-route-enter var(--dur-slow) var(--ease-out-soft) both;
+}
+
 @keyframes page-enter {
   from {
     opacity: 0;
-    transform: translateY(var(--shift-sm));
+    transform: translate3d(0, var(--shift-sm), 0);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
@@ -131,7 +141,6 @@ body,
    默认主题给 .box 的 hover 边框变化是 scoped 样式，
    优先级高于外部样式，必须直接作用在 .box 上才能统一过渡节奏，
    否则会出现"外层位移丝滑、内层边框跳变"的撕裂感。 */
-.VPFeature .box,
 .vp-doc .custom-block {
   transition:
     transform var(--dur-base) var(--ease-out-soft),
@@ -140,13 +149,34 @@ body,
 }
 
 .VPFeature:hover .box {
-  transform: translateY(calc(-1 * var(--shift-xs)));
-  box-shadow: 0 8px 24px -12px rgba(0, 0, 0, 0.18);
+  transform: none;
+  box-shadow: none;
 }
 
 /* 外层不再单独做 transform，避免双层各自动画导致的错位 */
 .VPFeature {
-  transition: none;
+  transition:
+    transform var(--dur-base) var(--ease-out-soft),
+    box-shadow var(--dur-base) var(--ease-standard),
+    border-color var(--dur-base) var(--ease-standard),
+    background-color var(--dur-base) var(--ease-standard) !important;
+  transform: translate3d(0, 0, 0);
+}
+
+@keyframes page-route-enter {
+  from {
+    opacity: 0;
+    transform: translate3d(0, var(--shift-sm), 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.VPFeature:hover {
+  transform: translate3d(0, calc(-1 * var(--shift-xs)), 0);
+  box-shadow: 0 12px 30px -16px rgba(0, 0, 0, 0.32);
 }
 
 /* =========================================================

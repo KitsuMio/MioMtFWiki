@@ -19,6 +19,19 @@
   overflow-x: clip;
 }
 
+/* VitePress reserves 48-64px below the hero in addition to the spacing
+   already present around the action buttons and feature grid. Tighten only
+   that bottom edge so the two related sections read as one composition. */
+.VPHome .VPHero {
+  padding-bottom: 28px;
+}
+
+@media (max-width: 639px) {
+  .VPHome .VPHero {
+    padding-bottom: 24px;
+  }
+}
+
 /* =========================================================
    Hero Background Glow
 ========================================================= */
@@ -52,9 +65,11 @@
 
   animation:
     mio-bg-float
-    20s
-    ease-in-out
+    24s
+    var(--ease-standard)
     infinite;
+
+  will-change: transform;
 }
 
 /* =========================================================
@@ -116,10 +131,10 @@
 
   animation:
 
-    mio-title-enter .8s
-    cubic-bezier(.22,1,.36,1),
+    mio-title-enter .9s
+    var(--ease-out-soft) both,
 
-    mio-shimmer 10s
+    mio-shimmer 12s
     linear
     infinite;
 
@@ -148,6 +163,8 @@
 
   font-weight:
     700;
+
+  animation: mio-hero-enter .75s .08s var(--ease-out-soft) both;
 }
 
 .VPHero .tagline {
@@ -160,6 +177,23 @@
 
   color:
     var(--vp-c-text-2);
+
+  animation: mio-hero-enter .75s .16s var(--ease-out-soft) both;
+}
+
+.VPHero .actions {
+  animation: mio-hero-enter .75s .24s var(--ease-out-soft) both;
+}
+
+.VPHomeFeatures {
+  animation: mio-hero-enter .8s .32s var(--ease-out-soft) both;
+}
+
+/* Continue the opening sequence into the home Markdown content. `both` keeps
+   it hidden during the delay instead of exposing the finished content before
+   the hero and feature cards have entered. */
+.VPHome > .vp-doc {
+  animation: mio-hero-enter .8s .42s var(--ease-out-soft) both;
 }
 
 /* =========================================================
@@ -215,24 +249,15 @@
     1px solid
     var(--vp-c-border);
 
-  transition:
-    all .25s ease;
-
   backdrop-filter:
     blur(8px);
 }
 
 .VPFeature:hover {
 
-  transform:
-    translateY(-3px);
-
   border-color:
     #F5A9B8;
 
-  box-shadow:
-    0 12px 32px
-    rgba(245,169,184,.10);
 }
 
 /* =========================================================
@@ -313,7 +338,7 @@
     left;
 
   transition:
-    transform .18s ease;
+    transform var(--dur-fast) var(--ease-out-soft);
 }
 
 .vp-doc a:hover::after {
@@ -441,7 +466,7 @@ div[class*="language-"] {
       0;
 
     transform:
-      translateY(12px);
+      translate3d(0, 12px, 0);
 
     letter-spacing:
       .15em;
@@ -453,10 +478,22 @@ div[class*="language-"] {
       1;
 
     transform:
-      translateY(0);
+      translate3d(0, 0, 0);
 
     letter-spacing:
       -.04em;
+  }
+}
+
+@keyframes mio-hero-enter {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 10px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
 }
 
@@ -545,7 +582,10 @@ div[class*="language-"] {
     blur(10px);
 
   transition:
-    all .22s ease;
+    transform var(--dur-base) var(--ease-out-soft),
+    box-shadow var(--dur-base) var(--ease-standard),
+    border-color var(--dur-base) var(--ease-standard),
+    background-color var(--dur-base) var(--ease-standard);
 }
 
 /* 左侧知识标识线 */

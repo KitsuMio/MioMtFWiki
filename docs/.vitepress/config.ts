@@ -7,6 +7,8 @@ export default defineConfig({
   description: "来自社区、服务社区的现代跨性别知识库",
   base: '/MioMtFWiki/',
   head: [
+    ['meta', { name: 'darkreader-lock' }],
+    ['meta', { name: 'color-scheme', content: 'light dark' }],
     [
       'script',
       {

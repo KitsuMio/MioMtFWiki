@@ -675,6 +675,51 @@ div[class*="language-"] {
   }
 }
 
+@keyframes mio-mobile-action-enter {
+  from {
+    opacity: 0;
+    transform: translate3d(8px, 4px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@media (max-width: 639px) {
+  /* On mobile the action list changes height substantially during hydration.
+     Animate stable list items instead of the reflowing parent container. */
+  .VPHero .actions {
+    animation: none;
+  }
+
+  .VPHero .action {
+    animation: mio-mobile-action-enter .52s var(--mio-mobile-action-delay, .7s) var(--ease-out-soft) both;
+  }
+
+  .VPHero .action:nth-child(1)  { --mio-mobile-action-delay: .24s; }
+  .VPHero .action:nth-child(2)  { --mio-mobile-action-delay: .285s; }
+  .VPHero .action:nth-child(3)  { --mio-mobile-action-delay: .33s; }
+  .VPHero .action:nth-child(4)  { --mio-mobile-action-delay: .375s; }
+  .VPHero .action:nth-child(5)  { --mio-mobile-action-delay: .42s; }
+  .VPHero .action:nth-child(6)  { --mio-mobile-action-delay: .465s; }
+  .VPHero .action:nth-child(7)  { --mio-mobile-action-delay: .51s; }
+  .VPHero .action:nth-child(8)  { --mio-mobile-action-delay: .555s; }
+  .VPHero .action:nth-child(9)  { --mio-mobile-action-delay: .6s; }
+  .VPHero .action:nth-child(10) { --mio-mobile-action-delay: .645s; }
+  .VPHero .action:nth-child(11) { --mio-mobile-action-delay: .69s; }
+  .VPHero .action:nth-child(12) { --mio-mobile-action-delay: .735s; }
+
+  .VPHomeFeatures {
+    animation: mio-hero-enter .72s .48s var(--ease-out-soft) both;
+  }
+
+  .VPHome > .vp-doc {
+    animation: mio-hero-enter .72s .56s var(--ease-out-soft) both;
+  }
+}
+
 @keyframes mio-shimmer {
 
   /* 关键修复:background-size 是 250%(即 N=2.5),

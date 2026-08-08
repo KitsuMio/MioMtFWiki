@@ -8,7 +8,15 @@
 
 .VPHero {
   position: relative;
-  overflow: hidden;
+  /* The glow is blurred beyond the hero box. Clipping it here produced the
+     hard horizontal edge between the hero and the feature cards. */
+  overflow: visible;
+}
+
+/* Keep the hero glow free to fade vertically while preventing its blurred,
+   animated edges from creating a horizontal page scrollbar. */
+.VPHome {
+  overflow-x: clip;
 }
 
 /* =========================================================
@@ -21,7 +29,8 @@
 
   position: absolute;
 
-  inset: 0;
+  /* Give the blur enough paint area to fade naturally into the next section. */
+  inset: -80px -120px -180px;
 
   pointer-events: none;
 

@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  lang: 'zh-CN',
   title: "MioMtFWiki",
   description: "来自社区、服务社区的现代跨性别知识库",
   base: '/MioMtFWiki/',
@@ -21,6 +22,8 @@ export default defineConfig({
   },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+    outlineTitle: '本页目录',
+
     nav: [
       { text: '首页', link: '/' },
     ],

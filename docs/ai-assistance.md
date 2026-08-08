@@ -1,6 +1,6 @@
 # 关于 AI 与本站内容
 
-## 本站属于 Vibe Coding 吗？
+## 本站内容属于 Vibe Coding 产物吗？
 
 不属于。
 

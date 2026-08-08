@@ -15,9 +15,9 @@
 
   /* ========= Background ========= */
 
-  --vp-c-bg: #FCFAF7;
-  --vp-c-bg-alt: #F7F4EF;
-  --vp-c-bg-soft: #F1EEE8;
+  --vp-c-bg: #FBF8F2;
+  --vp-c-bg-alt: #F6F1E8;
+  --vp-c-bg-soft: #EFE9DF;
   --vp-c-bg-elv: #FFFFFF;
 
   /* ========= Text ========= */
@@ -44,8 +44,8 @@
 
   /* ========= Paper ========= */
 
-  --mio-paper-1: #FCFAF7;
-  --mio-paper-2: #FBF8F3;
-  --mio-paper-3: #F8F4EE;
+  --mio-paper-1: #FCFAF6;
+  --mio-paper-2: #FAF6EF;
+  --mio-paper-3: #F6F0E6;
 
 }

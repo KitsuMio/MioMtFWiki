@@ -58,16 +58,25 @@
 
 .dark .VPNavBar {
 
-  background:
+  background-color:
     rgba(
       15,
       23,
       42,
-      .8
-    );
+      .68
+    ) !important;
+
+  -webkit-backdrop-filter:
+    blur(18px) saturate(140%);
 
   backdrop-filter:
-    blur(16px);
+    blur(18px) saturate(140%);
+
+  border-bottom-color:
+    rgba(148,163,184,.13);
+
+  box-shadow:
+    0 8px 30px rgba(2,6,23,.22);
 }
 
 /* Feature */

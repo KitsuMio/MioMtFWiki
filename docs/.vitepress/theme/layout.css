@@ -1,10 +1,68 @@
+.VPNavBar {
+  background-color:
+    rgba(252,250,246,.72) !important;
+
+  -webkit-backdrop-filter:
+    blur(18px) saturate(135%);
+
+  backdrop-filter:
+    blur(18px) saturate(135%);
+
+  border-bottom:
+    1px solid rgba(117,96,69,.12);
+
+  box-shadow:
+    0 8px 28px rgba(74,58,39,.055);
+}
+
+.VPNavBar .divider-line {
+  background-color:
+    transparent !important;
+}
+
+/* Documentation pages with a sidebar add opaque backgrounds to these inner
+   sections by default. Keep them transparent so the outer glass layer remains
+   visible consistently on home, article and mobile navigation states. */
+.VPNavBar .title,
+.VPNavBar .content-body {
+  background-color:
+    transparent !important;
+}
+
 .VPContent {
-  background:
+  background-color:
+    var(--mio-paper-2);
+
+  background-image:
+    radial-gradient(
+      ellipse at 18% 8%,
+      rgba(255,255,255,.58),
+      transparent 42%
+    ),
+    radial-gradient(
+      ellipse at 82% 62%,
+      rgba(151,118,76,.025),
+      transparent 48%
+    ),
     linear-gradient(
       180deg,
-      var(--mio-paper-1),
-      var(--mio-paper-2)
-    );
+      var(--mio-paper-1) 0%,
+      var(--mio-paper-2) 48%,
+      var(--mio-paper-3) 100%
+    ),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cfilter id='paper'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='table' tableValues='0 .028'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23paper)' opacity='.42'/%3E%3C/svg%3E");
+
+  background-size:
+    100% 760px,
+    100% 920px,
+    100% 100%,
+    180px 180px;
+
+  background-repeat:
+    no-repeat,
+    no-repeat,
+    no-repeat,
+    repeat;
 }
 
 .dark .VPContent {

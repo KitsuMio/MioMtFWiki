@@ -200,6 +200,64 @@
    Hero Buttons
 ========================================================= */
 
+.VPHero .actions {
+  counter-reset: mio-hero-nav;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 7px;
+  margin: 0;
+  max-width: 576px;
+  padding-top: 28px;
+}
+
+.VPHero .action {
+  counter-increment: mio-hero-nav;
+  padding: 0;
+  width: 100%;
+}
+
+.VPHero .action .VPButton {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 44px;
+  padding: 0 46px 0 50px;
+  border-radius: 12px;
+  border-color: rgba(104,88,67,.14);
+  background: rgba(255,255,255,.38);
+  box-shadow: 0 1px 0 rgba(255,255,255,.55) inset;
+  text-align: left;
+}
+
+.VPHero .action .VPButton::before {
+  content: counter(mio-hero-nav, decimal-leading-zero);
+  position: absolute;
+  left: 16px;
+  color: var(--vp-c-text-3);
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: .08em;
+}
+
+.VPHero .action .VPButton::after {
+  content: "→";
+  position: absolute;
+  right: 16px;
+  color: var(--vp-c-text-3);
+  font-size: 16px;
+  transform: translateX(0);
+  transition:
+    transform var(--dur-base) var(--ease-out-soft),
+    color var(--dur-fast) var(--ease-standard);
+}
+
+.VPHero .action .VPButton:hover::after {
+  color: var(--vp-c-brand-1);
+  transform: translateX(3px);
+}
+
 .VPButton.brand {
 
   background:
@@ -215,6 +273,20 @@
   box-shadow:
     0 4px 16px
     rgba(231,121,149,.25);
+}
+
+.VPHero .action .VPButton.brand {
+  border-color: transparent;
+  color: #fff;
+  background: linear-gradient(135deg, #F5A9B8, #E77995);
+  box-shadow:
+    0 8px 22px rgba(231,121,149,.22),
+    0 1px 0 rgba(255,255,255,.28) inset;
+}
+
+.VPHero .action .VPButton.brand::before,
+.VPHero .action .VPButton.brand::after {
+  color: rgba(255,255,255,.78);
 }
 
 .VPButton.brand:hover {
@@ -234,6 +306,114 @@
 
   color:
     #F5A9B8;
+}
+
+.VPHero .action .VPButton.alt:hover {
+  border-color: rgba(231,121,149,.32);
+  background: rgba(245,169,184,.075);
+}
+
+@media (min-width: 640px) and (max-width: 1199px) {
+  .VPHero:not(.has-image) .actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .VPHero:not(.has-image) .action:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: start;
+    width: calc((100% - 8px) / 2);
+  }
+
+  .VPHero:not(.has-image) .action:only-child {
+    width: 100%;
+  }
+}
+
+@media (min-width: 960px) and (max-width: 1199px) {
+  .VPHero:not(.has-image) .main {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .VPHero:not(.has-image) .main {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 520px;
+    grid-template-rows: min-content min-content;
+    column-gap: 48px;
+    align-items: start;
+    width: 100%;
+  }
+
+  .VPHero:not(.has-image) .heading,
+  .VPHero:not(.has-image) .tagline {
+    grid-column: 1;
+  }
+
+  .VPHero:not(.has-image) .actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    gap: 8px;
+    max-height: 332px;
+    max-width: none;
+    margin: -36px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 36px;
+    scrollbar-width: none;
+  }
+
+  /* Up to ten entries (five rows) fit without scrolling. Once an eleventh
+     entry exists, expose part of the next row as an unmistakable cue that the
+     index continues below. */
+  .VPHero:not(.has-image) .actions:has(.action:nth-child(11)) {
+    max-height: 298px;
+  }
+
+  .VPHero:not(.has-image) .actions.has-scroll-overflow.can-scroll-down {
+    -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 calc(100% - 18px), transparent 100%);
+    mask-image: linear-gradient(180deg, #000 0%, #000 calc(100% - 18px), transparent 100%);
+  }
+
+  .VPHero:not(.has-image) .actions.has-scroll-overflow.can-scroll-up.can-scroll-down {
+    -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 18px, #000 calc(100% - 18px), transparent 100%);
+    mask-image: linear-gradient(180deg, transparent 0%, #000 18px, #000 calc(100% - 18px), transparent 100%);
+  }
+
+  .VPHero:not(.has-image) .actions.has-scroll-overflow.can-scroll-up.is-scroll-bottom {
+    -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 18px, #000 100%);
+    mask-image: linear-gradient(180deg, transparent 0%, #000 18px, #000 100%);
+  }
+
+  .VPHero:not(.has-image) .actions::-webkit-scrollbar {
+    display: none;
+  }
+
+  .VPHero:not(.has-image) .action:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: start;
+    width: calc((100% - 8px) / 2);
+  }
+
+  .VPHero:not(.has-image) .action:only-child {
+    width: 100%;
+  }
+}
+
+.dark .VPHero .action .VPButton.alt {
+  border-color: rgba(148,163,184,.13);
+  background: rgba(255,255,255,.035);
+  box-shadow: 0 1px 0 rgba(255,255,255,.035) inset;
+}
+
+.dark .VPHero .action .VPButton.alt:hover {
+  border-color: rgba(245,169,184,.28);
+  background: rgba(245,169,184,.075);
 }
 
 /* =========================================================

@@ -461,7 +461,6 @@ div[class*="language-"] {
 @keyframes mio-title-enter {
 
   from {
-
     opacity:
       0;
 
@@ -473,7 +472,6 @@ div[class*="language-"] {
   }
 
   to {
-
     opacity:
       1;
 

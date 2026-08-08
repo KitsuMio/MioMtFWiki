@@ -23,7 +23,9 @@ export default {
 
       // Home owns a longer, staggered opening sequence. Applying the generic
       // route animation here would override its delayed content entrance.
-      if (document.querySelector('.VPHome')) return
+      if (document.querySelector('.VPHome')) {
+        return
+      }
 
       const doc = document.querySelector<HTMLElement>('.vp-doc')
       if (!doc) return

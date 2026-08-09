@@ -72,9 +72,6 @@
   backdrop-filter:
     blur(18px) saturate(140%);
 
-  border-bottom-color:
-    rgba(148,163,184,.13);
-
   box-shadow:
     0 8px 30px rgba(2,6,23,.22);
 }

@@ -9,7 +9,7 @@
     blur(18px) saturate(135%);
 
   border-bottom:
-    1px solid rgba(117,96,69,.12);
+    none;
 
   box-shadow:
     0 8px 28px rgba(74,58,39,.055);
@@ -54,6 +54,13 @@
 .VPNavBar .title,
 .VPNavBar .content-body {
   background-color:
+    transparent !important;
+}
+
+/* DefaultTheme draws a short divider only beneath the title when a desktop
+   sidebar exists. It becomes an isolated line inside the glass navigation. */
+.VPNavBar .VPNavBarTitle.has-sidebar .title {
+  border-bottom-color:
     transparent !important;
 }
 

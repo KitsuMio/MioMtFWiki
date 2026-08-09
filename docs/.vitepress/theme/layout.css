@@ -1,10 +1,3 @@
-.VPNav {
-  /* VitePress only fixes the nav from 960px upward. A sticky mobile nav keeps
-     its layout space while allowing page content to pass behind the glass. */
-  position: sticky;
-  top: var(--vp-layout-top-height, 0px);
-}
-
 .VPNavBar {
   background-color:
     rgba(252,250,246,.72) !important;
@@ -23,6 +16,31 @@
 
   transform:
     translateZ(0);
+}
+
+@media (max-width: 959px) {
+  /* The doubled class plus !important beats VitePress' scoped
+     .VPNav[data-v-*] position rule without affecting desktop fixed nav. */
+  .VPNav.VPNav {
+    position: sticky !important;
+    top: var(--vp-layout-top-height, 0px);
+  }
+
+  .VPNavBar.VPNavBar {
+    background-color:
+      rgba(252,250,246,.58) !important;
+
+    -webkit-backdrop-filter:
+      blur(22px) saturate(145%);
+
+    backdrop-filter:
+      blur(22px) saturate(145%);
+  }
+
+  .dark .VPNavBar.VPNavBar {
+    background-color:
+      rgba(15,23,42,.54) !important;
+  }
 }
 
 .VPNavBar .divider-line {

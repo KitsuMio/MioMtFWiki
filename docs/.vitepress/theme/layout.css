@@ -1,3 +1,10 @@
+.VPNav {
+  /* VitePress only fixes the nav from 960px upward. A sticky mobile nav keeps
+     its layout space while allowing page content to pass behind the glass. */
+  position: sticky;
+  top: var(--vp-layout-top-height, 0px);
+}
+
 .VPNavBar {
   background-color:
     rgba(252,250,246,.72) !important;
@@ -13,6 +20,9 @@
 
   box-shadow:
     0 8px 28px rgba(74,58,39,.055);
+
+  transform:
+    translateZ(0);
 }
 
 .VPNavBar .divider-line {

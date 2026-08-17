@@ -41,6 +41,31 @@
     background-color:
       rgba(15,23,42,.54) !important;
   }
+
+  /* In-app browsers may float translucent controls above the layout viewport.
+     Extend the site's glass upward so their chrome samples frosted navigation
+     instead of raw page content. The extension is harmless when off-screen. */
+  .VPNavBar.VPNavBar {
+    isolation: isolate;
+  }
+
+  .VPNavBar.VPNavBar::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    left: 0;
+    z-index: -1;
+    height: max(96px, env(safe-area-inset-top));
+    background: rgba(252,250,246,.58);
+    -webkit-backdrop-filter: blur(22px) saturate(145%);
+    backdrop-filter: blur(22px) saturate(145%);
+    pointer-events: none;
+  }
+
+  .dark .VPNavBar.VPNavBar::before {
+    background: rgba(15,23,42,.54);
+  }
 }
 
 .VPNavBar .divider-line {

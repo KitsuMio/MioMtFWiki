@@ -22,8 +22,15 @@
   /* The doubled class plus !important beats VitePress' scoped
      .VPNav[data-v-*] position rule without affecting desktop fixed nav. */
   .VPNav.VPNav {
-    position: sticky !important;
+    position: fixed !important;
     top: var(--vp-layout-top-height, 0px);
+  }
+
+  /* Fixed positioning removes the nav from normal flow. Restore exactly one
+     nav-height of layout space; the home hero's existing negative margin then
+     cancels it just as it did with VitePress' original in-flow mobile nav. */
+  .VPContent.VPContent {
+    padding-top: var(--vp-nav-height);
   }
 
   .VPNavBar.VPNavBar {
@@ -42,30 +49,6 @@
       rgba(15,23,42,.54) !important;
   }
 
-  /* In-app browsers may float translucent controls above the layout viewport.
-     Extend the site's glass upward so their chrome samples frosted navigation
-     instead of raw page content. The extension is harmless when off-screen. */
-  .VPNavBar.VPNavBar {
-    isolation: isolate;
-  }
-
-  .VPNavBar.VPNavBar::before {
-    content: "";
-    position: absolute;
-    right: 0;
-    bottom: 100%;
-    left: 0;
-    z-index: -1;
-    height: max(96px, env(safe-area-inset-top));
-    background: rgba(252,250,246,.58);
-    -webkit-backdrop-filter: blur(22px) saturate(145%);
-    backdrop-filter: blur(22px) saturate(145%);
-    pointer-events: none;
-  }
-
-  .dark .VPNavBar.VPNavBar::before {
-    background: rgba(15,23,42,.54);
-  }
 }
 
 .VPNavBar .divider-line {

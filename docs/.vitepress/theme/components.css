@@ -475,11 +475,7 @@ html.dark .VPDocAsideOutline .content {
 }
 
 .VPDocAsideOutline .outline-marker {
-  left: 7px;
-  width: 3px;
-  border-radius: 999px;
-  background: var(--vp-c-brand-1);
-  box-shadow: 0 0 10px color-mix(in srgb, var(--vp-c-brand-1) 42%, transparent);
+  display: none !important;
 }
 
 .VPDocAsideOutline .VPDocOutlineItem.root {
@@ -492,6 +488,7 @@ html.dark .VPDocAsideOutline .content {
 }
 
 .VPDocAsideOutline .outline-link {
+  position: relative;
   margin: 2px 0;
   padding: 0 9px;
   border-radius: 8px;
@@ -499,21 +496,54 @@ html.dark .VPDocAsideOutline .content {
   font-size: 13px;
   line-height: 30px;
   transition:
-    color var(--dur-fast) var(--ease-standard),
-    background-color var(--dur-fast) var(--ease-standard),
-    transform var(--dur-fast) var(--ease-out-soft);
+    color 220ms var(--ease-standard),
+    background-color 220ms var(--ease-standard);
+}
+
+.VPDocAsideOutline .outline-link::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  bottom: 7px;
+  left: 0;
+  width: 2px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--vp-c-brand-1) 66%, var(--vp-c-text-3));
+  opacity: 0;
+  transform: scaleY(.45);
+  transition:
+    opacity 220ms var(--ease-standard),
+    transform 260ms var(--ease-out-soft);
 }
 
 .VPDocAsideOutline .outline-link:hover {
-  color: var(--vp-c-text-1);
-  background: color-mix(in srgb, var(--vp-c-brand-soft) 34%, transparent);
-  transform: translateX(2px);
+  color: var(--vp-c-text-2);
+  background: color-mix(in srgb, var(--vp-c-brand-soft) 18%, transparent);
 }
 
-.VPDocAsideOutline .outline-link.active {
-  color: var(--vp-c-brand-1);
-  background: color-mix(in srgb, var(--vp-c-brand-soft) 62%, transparent);
-  font-weight: 600;
+.VPDocAsideOutline .outline-link.active,
+.VPDocAsideOutline.is-navigating .outline-link.mio-outline-target {
+  color: color-mix(in srgb, var(--vp-c-brand-1) 42%, var(--vp-c-text-2));
+  background: color-mix(in srgb, var(--vp-c-brand-soft) 25%, transparent);
+  font-weight: 500;
+}
+
+.VPDocAsideOutline .outline-link.active::before,
+.VPDocAsideOutline.is-navigating .outline-link.mio-outline-target::before {
+  opacity: .68;
+  transform: scaleY(1);
+}
+
+.VPDocAsideOutline.is-navigating .outline-link.active:not(.mio-outline-target) {
+  color: var(--vp-c-text-3);
+  background: transparent;
+  font-weight: 400;
+}
+
+.VPDocAsideOutline.is-navigating
+  .outline-link.active:not(.mio-outline-target)::before {
+    opacity: 0;
+    transform: scaleY(.45);
 }
 
 /* =========================================================

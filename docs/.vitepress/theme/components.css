@@ -1083,6 +1083,12 @@ html.dark .VPDocAsideOutline .content {
   font-weight: 700;
 }
 
+/* VitePress offsets h2 anchors by the default 24px heading padding. This
+   theme removes that padding, so the offset must be removed with it. */
+.vp-doc h2 > a.header-anchor {
+  top: 0 !important;
+}
+
 .vp-doc h3 {
 
   color: var(--vp-c-text-1);

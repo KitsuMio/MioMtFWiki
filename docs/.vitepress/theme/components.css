@@ -276,6 +276,109 @@
 }
 
 /* =========================================================
+   Footnotes
+========================================================= */
+
+.vp-doc .footnote-ref {
+  position: relative;
+  top: -.22em;
+  margin-left: .08em;
+  font-size: .68em;
+  font-variant-numeric: tabular-nums;
+  line-height: 0;
+}
+
+.vp-doc .footnote-ref a {
+  color: color-mix(in srgb, var(--vp-c-brand-1) 62%, var(--vp-c-text-3));
+  font-weight: 600;
+  text-decoration: none;
+  transition: color var(--dur-fast) var(--ease-standard);
+}
+
+.vp-doc .footnote-ref a:hover {
+  color: var(--vp-c-brand-1);
+}
+
+.vp-doc .footnotes-sep {
+  margin: 48px 0 18px;
+  border: 0;
+  width: 38%;
+  height: 1px;
+  background: color-mix(in srgb, var(--vp-c-divider) 68%, transparent);
+}
+
+.vp-doc .footnotes {
+  color: var(--vp-c-text-3);
+  font-size: .8em;
+  line-height: 1.55;
+}
+
+.vp-doc .footnotes::before {
+  content: "参考文献";
+  display: block;
+  margin-bottom: 10px;
+  color: var(--vp-c-text-2);
+  font-family: var(--vp-font-family-base);
+  font-size: .86rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+}
+
+.vp-doc .footnotes-list {
+  padding-left: 1.65em;
+}
+
+.vp-doc .footnote-item {
+  padding-left: .35em;
+  scroll-margin-top: calc(var(--vp-nav-height) + 24px);
+}
+
+.vp-doc .footnote-item::marker {
+  color: var(--vp-c-text-3);
+  font-weight: 500;
+}
+
+.vp-doc .footnote-item:target {
+  border-radius: 8px;
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--vp-c-brand-1) 10%, transparent),
+    transparent 72%
+  );
+}
+
+.vp-doc .footnote-item p {
+  margin: 5px 0;
+}
+
+.vp-doc .footnote-backref {
+  display: inline-flex;
+  margin-left: .28em;
+  padding: .08em .32em;
+  border-radius: 5px;
+  color: var(--vp-c-text-3);
+  font-family: var(--vp-font-family-base) !important;
+  font-size: .9em;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.vp-doc .footnote-backref:hover {
+  color: var(--vp-c-brand-1);
+  background: color-mix(in srgb, var(--vp-c-brand-1) 7%, transparent);
+}
+
+@media (max-width: 639px) {
+  .vp-doc .footnotes-sep {
+    margin-top: 42px;
+  }
+
+  .vp-doc .footnotes-list {
+    padding-left: 1.4em;
+  }
+}
+
+/* =========================================================
    Hero Buttons
 ========================================================= */
 

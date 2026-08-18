@@ -20,7 +20,7 @@
 
 **HRT 刚开始几天到几周时参考价值很低。**
 
-女性化 HRT 后，自发勃起和性欲下降通常在 **1–3 个月**开始出现，并在 **3–6 个月**进一步发展。<sup>[1]</sup>
+女性化 HRT 后，自发勃起和性欲下降通常在 **1–3 个月**开始出现，并在 **3–6 个月**进一步发展。[^hembree2017]
 
 因此可以理解为：
 
@@ -43,7 +43,7 @@
 
 **主动刺激后还能勃起不代表 T 没压住。**
 
-研究发现，雌激素治疗可以明显减少自发和夜间勃起，但主动性刺激下的反应仍然可能保留。<sup>[2]</sup>
+研究发现，雌激素治疗可以明显减少自发和夜间勃起，但主动性刺激下的反应仍然可能保留。[^estrogen1985]
 
 因此主要看**自然状态下的勃起频率**，而不是刻意刺激后还能不能勃起。
 
@@ -55,7 +55,7 @@
 
 > 和自己以前比，而不是和别人比。
 
-女性化 HRT 会减少精液生成和射出液量。2025 年一项正在 HRT 的跨女 / AMAB 性别多元者研究中，15 人有 13 人仍能产生射出液，其中 8 人已经无精子；只有 4 人能够产生含活动精子的样本。后者的 T 和 LH 明显更高。<sup>[3]</sup>
+女性化 HRT 会减少精液生成和射出液量。2025 年一项正在 HRT 的跨女 / AMAB 性别多元者研究中，15 人有 13 人仍能产生射出液，其中 8 人已经无精子；只有 4 人能够产生含活动精子的样本。后者的 T 和 LH 明显更高。[^semen2025]
 
 因此：
 
@@ -70,7 +70,7 @@
 
 除了量，也可以观察射出液的**颜色、透明度和浓稠程度是否相比 HRT 前发生长期变化**。
 
-精囊和前列腺属于雄激素依赖组织；在人类雌激素抑制实验中，随着 T 下降，射出液量和精浆果糖含量也随之下降。<sup>[4]</sup>
+精囊和前列腺属于雄激素依赖组织；在人类雌激素抑制实验中，随着 T 下降，射出液量和精浆果糖含量也随之下降。[^ethinyl1991]
 
 因此社区中常见的：
 
@@ -96,7 +96,7 @@
 
 这也是有研究依据的。
 
-跨女开始 HRT 后，研究观察到了**达到高潮所需时间增加**，同时高潮持续时间和体验方式也会发生改变。<sup>[5]</sup>
+跨女开始 HRT 后，研究观察到了**达到高潮所需时间增加**，同时高潮持续时间和体验方式也会发生改变。[^orgasm2023]
 
 因此高潮明显变困难，可以作为古法的一项有价值指标。
 
@@ -128,23 +128,12 @@
 
 反过来，如果 HRT 已经持续数月，但这些指标和 HRT 前相比几乎都没有变化，则可以怀疑雄激素抑制不足。
 
-## 参考文献
+[^hembree2017]: Hembree WC, Cohen-Kettenis PT, Gooren L, et al. [Endocrine Treatment of Gender-Dysphoric/Gender-Incongruent Persons: An Endocrine Society Clinical Practice Guideline](https://doi.org/10.1210/jc.2017-01658). *J Clin Endocrinol Metab.* 2017;102(11):3869–3903. doi:10.1210/jc.2017-01658.
 
-1. Hembree WC, Cohen-Kettenis PT, Gooren L, et al.
-   [Endocrine Treatment of Gender-Dysphoric/Gender-Incongruent Persons: An Endocrine Society Clinical Practice Guideline][1].
-   *J Clin Endocrinol Metab.* 2017;102(11):3869–3903.
-   doi:10.1210/jc.2017-01658.
+[^estrogen1985]: Kwan M, VanMaasdam J, Davidson JM. [Effects of estrogen treatment on sexual behavior in male-to-female transsexuals: Experimental and clinical observations](https://doi.org/10.1007/BF01541350). *Arch Sex Behav.* 1985;14(1):29–40. doi:10.1007/BF01541350.
 
-2. [Effects of estrogen treatment on sexual behavior in male-to-female transsexuals][2].
+[^semen2025]: Tristano R, Hood A, Huepful B, Raheem O, Schneider J, Adeleye A. [Semen parameters in transgender women and gender-diverse people assigned male at birth using gender-affirming hormones: Cohort study and scoping review](https://doi.org/10.1016/j.xfre.2025.03.002). *F S Rep.* 2025;6(2):129–139. doi:10.1016/j.xfre.2025.03.002.
 
-3. [Semen parameters in transgender women and gender-diverse people assigned male at birth using gender-affirming hormones][3].
+[^ethinyl1991]: Lübbert H, Leo-Rossberg I, Hammerstein J. [Effects of ethinyl estradiol on semen quality and various hormonal parameters in a eugonadal male](https://doi.org/10.1016/S0015-0282(16)55271-6). *Fertil Steril.* 1992;58(3):603–608. doi:10.1016/S0015-0282(16)55271-6.
 
-4. [Effects of ethinyl estradiol on semen quality and various hormonal parameters in a eugonadal male][4].
-
-5. [Effects of Gender-affirming Hormone Therapy on Orgasm Function of Transgender Men and Women: A Long Term Follow Up][5].
-
-[1]: https://doi.org/10.1210/jc.2017-01658
-[2]: https://pubmed.ncbi.nlm.nih.gov/2983641/
-[3]: https://pubmed.ncbi.nlm.nih.gov/40620376/
-[4]: https://pubmed.ncbi.nlm.nih.gov/1387850/
-[5]: https://pubmed.ncbi.nlm.nih.gov/36646176/
+[^orgasm2023]: Zaliznyak M, Lauzon M, Stelmar J, Yuan N, Smith SM, Garcia MM. [Effects of Gender-affirming Hormone Therapy on Orgasm Function of Transgender Men and Women: A Long Term Follow Up](https://doi.org/10.1016/j.urology.2023.01.002). *Urology.* 2023;174:86–91. doi:10.1016/j.urology.2023.01.002.

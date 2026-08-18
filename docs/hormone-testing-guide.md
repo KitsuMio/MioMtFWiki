@@ -4,8 +4,8 @@
 
 ## 结论
 
-- 查的项目通常叫**性激素六项**（雌二醇、睾酮、泌乳素、促黄体素 LH、促卵泡激素 FSH、孕酮），其中对 HRT 来说 **雌二醇（E2）、睾酮（T）、泌乳素（PRL）** 这三项最关键，LH/FSH/孕酮参考意义较小。
-- 抽血时间：**应在下一次服药/用药前**去抽，也就是测"谷浓度"（Trough Level）。刚吃完药或刚用完凝胶就去抽血，测出来的数值会偏高、不能反映平时真实水平，没有参考意义。
+- 查的项目通常叫**性激素六项**（雌二醇、睾酮、泌乳素、促黄体素 LH、促卵泡激素 FSH、孕酮），其中对 HRT 来说 **雌二醇（E2）、睾酮（T）、泌乳素（PRL）** 这三项最关键，LH/FSH/孕酮参考意义较小。[^hembree2017][^wilson2020]
+- 抽血时间：**应在下一次服药/用药前**去抽，也就是测"谷浓度"（Trough Level）。刚吃完药或刚用完凝胶就去抽血，测出来的数值会偏高、不能反映平时真实水平，没有参考意义。[^doll2022][^nolan2025]
 - 可以**只查 E2、T、PRL 三项**，更省钱也更快。
 - 不需要让医生知道你在用激素、也不需要解释为什么要查，直接去挂号/做体检，用一句笼统的理由就能开到检查单。
 
@@ -55,7 +55,7 @@
 |---|---|---|
 |**E2**|雌二醇|衡量雌激素水平是否达到目标范围，是判断剂量是否合适最核心的指标|
 |**T** / **TESTO**|睾酮|衡量抗雄是否有效，没压下去说明抗雄方案需要调整|
-|**PRL**|泌乳素|偏高常见于服用 CPA（色普龙）的人，长期过高需要关注，也用来判断是否需要调整 CPA 剂量|
+|**PRL**|泌乳素|偏高常见于服用 CPA（色普龙）的人，长期过高需要关注，也用来判断是否需要调整 CPA 剂量[^wilson2020]|
 
 LH（促黄体素）、FSH（促卵泡激素）、P（孕酮）这三项对大多数人来说参考价值有限，**了解一下报告上的位置即可，不用过度解读**。
 
@@ -63,14 +63,14 @@ LH（促黄体素）、FSH（促卵泡激素）、P（孕酮）这三项对大�
 
 不同医院、不同检测设备的参考范围会有差异，报告单上一般会自带"参考范围"一列，注意单位是否一致（有些医院用 pg/mL，有些用 pmol/L，二者换算关系大约是 1 pg/mL ≈ 3.67 pmol/L）：
 
-- **E2**：常见参考目标 100~200 pg/mL（约 367~734 pmol/L）
-- **T**：常见参考目标 <50 ng/dL（约 <1.7 nmol/L）
+- **E2**：常见参考目标 100~200 pg/mL（约 367~734 pmol/L）[^hembree2017][^soc8]
+- **T**：常见参考目标 <50 ng/dL（约 <1.7 nmol/L）[^hembree2017][^soc8]
 
 ---
 
 ## 抽血前要注意的几件事
 
-1. **抽血安排在下一次用药前**，也就是测谷浓度。比如每天早晚各含服一次雌二醇片，那应该在早上吃药前去抽血，不要刚含完药就跑去抽血——那样测出来的是峰值，没有参考意义，容易让你误判"剂量够了/不够了"。
+1. **抽血安排在下一次用药前**，也就是测谷浓度。比如每天早晚各含服一次雌二醇片，那应该在早上吃药前去抽血，不要刚含完药就跑去抽血——那样测出来的是峰值，没有参考意义，容易让你误判"剂量够了/不够了"。[^doll2022]
 2. 大部分激素检查不强制要求空腹，但如果同时查肝肾功能、血糖等项目，建议按那部分要求空腹。
 3. 可以只挂 E2/T/PRL 这三项，节省时间和费用。
 4. 检查频率没有固定标准，调整剂量初期可以隔 1~2 个月查一次，剂量稳定后可以拉长到 3~6 个月一次。
@@ -83,3 +83,13 @@ LH（促黄体素）、FSH（促卵泡激素）、P（孕酮）这三项对大�
 
 - 自己的实际身体感受（女性化进展、情绪、精力状态等）
 - [HRT 入门](./hrt-start) 中关于雌雄双高/双低的判断
+
+[^hembree2017]: Hembree WC, Cohen-Kettenis PT, Gooren L, et al. [Endocrine Treatment of Gender-Dysphoric/Gender-Incongruent Persons: An Endocrine Society Clinical Practice Guideline](https://doi.org/10.1210/jc.2017-01658). *J Clin Endocrinol Metab.* 2017;102(11):3869–3903. doi:10.1210/jc.2017-01658.
+
+[^soc8]: Coleman E, Radix AE, Bouman WP, et al. [Standards of Care for the Health of Transgender and Gender Diverse People, Version 8](https://doi.org/10.1080/26895269.2022.2100644). *Int J Transgend Health.* 2022;23(Suppl 1):S1–S259. doi:10.1080/26895269.2022.2100644.
+
+[^nolan2025]: Nolan BJ, Cheung AS. [Laboratory Monitoring in Transgender and Gender-Diverse Individuals](https://doi.org/10.1093/clinchem/hvaf001). *Clin Chem.* 2025;71(3):358–377. doi:10.1093/clinchem/hvaf001.
+
+[^doll2022]: Doll E, Gunsolus I, Thorgerson A, et al. [Pharmacokinetics of Sublingual Versus Oral Estradiol in Transgender Women](https://doi.org/10.1016/j.eprac.2021.11.081). *Endocr Pract.* 2022;28(3):237–242. doi:10.1016/j.eprac.2021.11.081.
+
+[^wilson2020]: Wilson LM, Baker KE, Sharma R, et al. [Effects of antiandrogens on prolactin levels among transgender women on estrogen therapy: A systematic review](https://doi.org/10.1080/15532739.2020.1819505). *Int J Transgend Health.* 2020;21(4):391–402. doi:10.1080/15532739.2020.1819505.

@@ -1,4 +1,6 @@
 import { defineConfig } from 'vitepress'
+// @ts-expect-error markdown-it-footnote does not publish TypeScript declarations.
+import footnote from 'markdown-it-footnote'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -20,7 +22,10 @@ export default defineConfig({
   ],
   markdown: {
     breaks: true,
-    math: true
+    math: true,
+    config(md) {
+      md.use(footnote)
+    }
   },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config

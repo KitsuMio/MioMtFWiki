@@ -73,7 +73,7 @@
     blur(18px) saturate(140%);
 
   box-shadow:
-    0 8px 30px rgba(2,6,23,.22);
+    var(--mio-nav-shadow);
 }
 
 /* Feature */

@@ -1,4 +1,19 @@
+:root {
+  --mio-nav-shadow: 0 10px 30px rgba(74, 58, 39, .065);
+  --mio-nav-edge: rgba(104, 88, 67, .1);
+}
+
+html.dark {
+  --mio-nav-shadow: 0 12px 34px rgba(2, 6, 23, .2);
+  --mio-nav-edge: rgba(148, 163, 184, .09);
+}
+
+.VPNav.VPNav {
+  box-shadow: none;
+}
+
 .VPNavBar {
+  position: relative;
   background-color:
     rgba(252,250,246,.72) !important;
 
@@ -8,14 +23,28 @@
   backdrop-filter:
     blur(18px) saturate(135%);
 
-  border-bottom:
-    none;
+  border-bottom: none;
 
-  box-shadow:
-    0 8px 28px rgba(74,58,39,.055);
+  box-shadow: var(--mio-nav-shadow);
 
   transform:
     translateZ(0);
+}
+
+/* Do not let VitePress' scroll-state divider or a CSS border participate in
+   navbar compositing. Draw one stable hairline independently instead. */
+.VPNavBar::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  background: var(--mio-nav-edge);
+  transform: scaleY(.5);
+  transform-origin: bottom;
+  pointer-events: none;
 }
 
 @media (max-width: 959px) {
@@ -44,9 +73,9 @@
 
 }
 
+.VPNavBar .divider,
 .VPNavBar .divider-line {
-  background-color:
-    transparent !important;
+  display: none !important;
 }
 
 /* Documentation pages with a sidebar add opaque backgrounds to these inner

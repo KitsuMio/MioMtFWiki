@@ -425,6 +425,172 @@ html.dark .VPSidebar .VPSidebarItem.level-1 > .item {
 }
 
 /* =========================================================
+   Mobile Navigation
+========================================================= */
+
+@media (max-width: 959px) {
+  .Layout:has(.VPLocalNav) .VPNavBar.VPNavBar {
+    background-color: transparent !important;
+    box-shadow: none;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+
+  .Layout:has(.VPLocalNav) .VPNavBar.VPNavBar::after {
+    display: none;
+  }
+
+  html.dark .Layout:has(.VPLocalNav) .VPNavBar.VPNavBar {
+    background-color: transparent !important;
+    box-shadow: none;
+  }
+
+  .VPLocalNav.VPLocalNav {
+    position: sticky;
+    top: var(--vp-nav-height);
+    isolation: isolate;
+    padding: 8px 14px;
+    border-top: 0;
+    border-bottom: 0;
+    background: transparent;
+    box-shadow: var(--mio-nav-shadow);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+
+  .VPLocalNav.VPLocalNav::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: calc(var(--vp-nav-height) * -1);
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(252, 250, 246, .72);
+    -webkit-backdrop-filter: blur(18px) saturate(130%);
+    backdrop-filter: blur(18px) saturate(130%);
+    pointer-events: none;
+  }
+
+  .VPLocalNav.VPLocalNav::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    background: var(--mio-nav-edge);
+    transform: scaleY(.5);
+    transform-origin: bottom;
+    pointer-events: none;
+  }
+
+  html.dark .VPLocalNav.VPLocalNav {
+    background: transparent;
+    box-shadow: var(--mio-nav-shadow);
+  }
+
+  html.dark .VPLocalNav.VPLocalNav::before {
+    background: rgba(15, 23, 42, .66);
+  }
+
+  .VPLocalNav .container {
+    gap: 10px;
+  }
+
+  .VPLocalNav .menu,
+  .VPLocalNav .VPLocalNavOutlineDropdown {
+    padding: 0;
+  }
+
+  .VPLocalNav .menu,
+  .VPLocalNav .VPLocalNavOutlineDropdown > button {
+    display: flex;
+    align-items: center;
+    min-height: 38px;
+    padding: 0 13px;
+    border: 1px solid color-mix(in srgb, var(--vp-c-divider) 58%, transparent);
+    border-radius: 11px;
+    background: color-mix(in srgb, var(--vp-c-bg-soft) 58%, transparent);
+    color: var(--vp-c-text-2);
+    font-size: 13px;
+    font-weight: 600;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .38) inset;
+    transition:
+      color var(--dur-fast) var(--ease-standard),
+      border-color var(--dur-fast) var(--ease-standard),
+      background-color var(--dur-fast) var(--ease-standard);
+  }
+
+  .VPLocalNav .menu:hover,
+  .VPLocalNav .VPLocalNavOutlineDropdown > button:hover,
+  .VPLocalNav .VPLocalNavOutlineDropdown > button.open {
+    color: var(--vp-c-text-1);
+    border-color: color-mix(in srgb, var(--vp-c-brand-1) 28%, var(--vp-c-divider));
+    background: color-mix(in srgb, var(--vp-c-brand-soft) 24%, var(--vp-c-bg-soft));
+  }
+
+  .VPLocalNav .menu-icon {
+    margin-right: 7px;
+    color: var(--vp-c-text-3);
+  }
+
+  .VPLocalNav .VPLocalNavOutlineDropdown .items {
+    top: 56px;
+    right: 12px;
+    left: 12px;
+    border-color: color-mix(in srgb, var(--vp-c-divider) 86%, transparent);
+    border-radius: 14px;
+    background: rgba(250, 247, 240, .97);
+    box-shadow:
+      0 24px 60px rgba(74, 58, 39, .2),
+      0 6px 18px rgba(74, 58, 39, .1),
+      0 1px 0 rgba(255, 255, 255, .72) inset;
+    -webkit-backdrop-filter: blur(22px) saturate(120%);
+    backdrop-filter: blur(22px) saturate(120%);
+  }
+
+  html.dark .VPLocalNav .VPLocalNavOutlineDropdown .items {
+    border-color: rgba(148, 163, 184, .2);
+    background: rgba(23, 32, 51, .97);
+    box-shadow:
+      0 26px 64px rgba(2, 6, 23, .42),
+      0 7px 20px rgba(2, 6, 23, .24),
+      0 1px 0 rgba(255, 255, 255, .035) inset;
+  }
+}
+
+@media (max-width: 767px) {
+  .VPNavBar .hamburger,
+  .VPNavBar .extra,
+  .VPNavScreen {
+    display: none !important;
+  }
+
+  .VPNavBar .appearance,
+  .VPNavBar .social-links {
+    display: flex !important;
+    align-items: center;
+  }
+
+  .VPNavBar .appearance::before {
+    display: none;
+  }
+
+  .VPNavBar .social-links {
+    margin-right: 0;
+  }
+
+  .VPNavBar .appearance + .social-links::before {
+    margin-right: 7px;
+    margin-left: 7px;
+    height: 20px;
+    opacity: .7;
+  }
+}
+
+/* =========================================================
    Page Outline Card
 ========================================================= */
 

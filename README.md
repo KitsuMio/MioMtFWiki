@@ -1,201 +1,88 @@
-# 🏳️‍⚧️ MioMtFWiki
+# MioMtFWiki
 
-[![Telegram Channel](https://img.shields.io/badge/Telegram-%E9%A2%91%E9%81%93-26A5E4?logo=telegram)](https://t.me/MioMtFWiki)
-[![Telegram Group](https://img.shields.io/badge/Telegram-%E7%BE%A4%E7%BB%84-26A5E4?logo=telegram)](https://t.me/MioMtFWikiGroup)
+[![在线阅读](https://img.shields.io/badge/在线阅读-MioMtFWiki-E77995)](https://kitsumio.github.io/MioMtFWiki/)
+[![Telegram 频道](https://img.shields.io/badge/Telegram-频道-26A5E4?logo=telegram&logoColor=white)](https://t.me/MioMtFWiki)
+[![Telegram 群组](https://img.shields.io/badge/Telegram-群组-26A5E4?logo=telegram&logoColor=white)](https://t.me/MioMtFWikiGroup)
+[![Discord](https://img.shields.io/badge/Discord-社区-5865F2?logo=discord&logoColor=white)](https://discord.com/invite/DfUhMhnrHT)
+[![License: CC BY-ND 4.0](https://img.shields.io/badge/License-CC_BY--ND_4.0-lightgrey)](https://creativecommons.org/licenses/by-nd/4.0/)
 
-> 社区共建、跟着讨论实时滚动的跨性别参考站
+> 结论优先、面向真实处境的跨性别社区参考站。
 
-MioMtFWiki 是一个社区驱动的跨性别知识项目。
+**[进入 MioMtFWiki](https://kitsumio.github.io/MioMtFWiki/)**
 
-我们不想做另一本医学教材，也不想做一座庞大但很少有人真正读完的资料库。
+> **每个人都有自行进行 HRT 的权利，这一权利不应以医生的许可为前提。我们优先考虑缺乏医疗条件的情况，并公开鄙视当前腐败、僵化且长期敌视跨性别者的中国医疗体系。**
 
-我们的目标很简单：
+## 这是什么
 
-> 让正确答案比群聊里的错误信息传播得更快。
+MioMtFWiki 是一个结论优先的跨性别社区参考站。它把社区中反复出现的问题整理成简洁、可执行的页面，让读者先得到答案，再按需要了解原理和依据。
 
----
+本站既为刚开始了解自己的新人提供行动入口，也为社区中的既有用户整理概念、争议和高频误解。目标是：**让正确答案比群聊里的错误信息传播得更快**。
 
-## 为什么会有这个项目
+## 你可以在这里找到什么
 
-跨性别相关资料其实并不少。
+- **认识自己**：性别认同入门、基础概念、常见刻板印象与社群争议。
+- **开始和管理 HRT**：常见用药方案、剂量与用法、副作用、激素化验和结果判断。
+- **应对医疗资源不足**：自主 HRT 所需的可执行信息、无法抽血时的辅助观察方法，以及明确标注证据边界的自制和未经验证方案。
+- **核对社区说法**：持续整理正在使用的术语、高频问题、分歧和容易传播的错误信息。
 
-真正缺少的是：
+## 内容如何形成
 
-- 能在几分钟内看完的资料
-- 看完就知道下一步做什么的资料
-- 愿意被转发给朋友的资料
-- 能回应社区当下问题的资料
+选题来自社区反复出现的问题，医学结论则尽量由临床指南、学术研究和药品说明书支持。正文优先保留会影响判断和行动的信息，引用集中放在脚注中，避免打断阅读。
 
-很多新人第一次接触跨性别相关内容时，得到的信息往往来自群聊、社交媒体和口耳相传。
+社区反馈会推动页面持续修订：发现错误、内容过时，或者出现新的高频问题时，本站会重新核对并更新相关内容。
 
-而这些地方同时也是误解、谣言和过时信息传播最快的地方。
+## 我们如何组织内容
 
-MioMtFWiki 希望成为那个遇到问题时可以第一时间打开的参考链接。
+- **结论与行动优先**：先回答该怎么做，再补充必要原理；尽量让读者在几分钟内找到下一步。
+- **关键结论有据可查**：剂量、用法、监测与风险尽量对应指南、研究或药品说明书，同时保持正文简洁。
+- **面向真实处境**：不假设每个人都能获得友善医疗，在资源有限时也提供清楚、能够执行的参考。
+- **跟随社区持续修订**：收录社区正在使用的概念、高频问题与争议，并根据新证据和实际反馈持续更新。
 
----
+## 关于 mtf.wiki 与 AI
 
-## 项目特点
+MioMtFWiki 侧重简洁、可执行和社区中的高频问题；mtf.wiki 侧重完整的知识覆盖与长期资料沉淀。两者用途不同，可以互相补充。
 
-### ✅ 结论优先
+- [了解 MioMtFWiki 与 mtf.wiki 的定位区别](https://kitsumio.github.io/MioMtFWiki/mio-and-mtfwiki.html)
+- [了解 AI 在本站内容制作中的实际作用](https://kitsumio.github.io/MioMtFWiki/ai-assistance.html)
 
-第一屏就是答案。
+本站不是由 AI 自动生成。AI 参与语言润色与结构整理，选题、资料判断和最终内容由编辑者负责。
 
-不是定义讲三页、历史讲三页、背景讲三页，最后才告诉你结论。
+## 参与改进
 
-### 🌐 来自社区
+如果你发现内容错误、资料过时、引用无法支持正文，或者有值得收录的新问题，欢迎：
 
-写什么，不是维护者觉得重要。
+- 提交 [Issue](https://github.com/KitsuMio/MioMtFWiki/issues)；
+- 提交 Pull Request；
+- 在 Telegram 群组或 Discord 中反馈。
 
-而是社区正在问什么、正在讨论什么、正在争论什么。
+修改医学相关内容时，请说明修改理由并附上可靠来源。正文应继续保持结论优先，避免加入不影响判断和行动的信息。
 
-### 🔄 跟着讨论实时滚动
+## 本地运行
 
-不是写完就归档的静态资料。
+需要 Node.js 18 或更高版本。
 
-社区出现新的高频问题、新的误解、新的共识、新的黑话，本站就会持续更新。
+```bash
+npm install
+npm run docs:dev
+```
 
-### ⚡ 贴近当下
+构建并预览生产版本：
 
-采用社区当前实际使用的概念与讨论框架。
+```bash
+npm run docs:build
+npm run docs:preview
+```
 
-不把几年前的社区语境当成今天的现实。
-
-### 🧭 社区参考点
-
-这里不仅服务新人。
-
-当社区成员需要确认：
-
-- 某个词到底是什么意思
-- 某种说法是否准确
-- 某个观点是不是已经过时
-
-MioMtFWiki 同样可以作为讨论时的参考依据。
-
----
-
-## 你能在这里找到什么
-
-### HRT
-
-- HRT 入门
-- 常见方案
-- 药物介绍
-- 风险与副作用
-- 高频问题
-
-### 性别认同
-
-- 性别认同相关概念
-- 常见术语解释
-- 身份与表达的区别
-- 社区常见误区
-
-### 现实生活
-
-- 出柜
-- 家庭沟通
-- 校园环境
-- 隐私保护
-- 实际经验分享
-
-### 社区议题
-
-- 高频问题整理
-- 常见谣言与误解
-- 社区黑话与术语
-- 持续更新的话题追踪
-
----
-
-## 这不是 AI 自动生成的网站
-
-AI 参与过部分表达润色工作。
-
-但网站的内容选题、结构设计、观点整理、社区观察与实际经验均由人工完成。
-
-许多内容本身就来自社区长期讨论与真实经验总结，并非 AI 可以凭空生成。
-
----
-
-## 与 mtf.wiki 的区别
-
-两者并不是竞争关系。
-
-### MioMtFWiki
-
-- 社区参考站
-- 结论优先
-- 持续滚动更新
-- 贴近社区语境
-- 强调可执行性
-
-### mtf.wiki
-
-- 大型知识基建
-- 引用规范
-- 覆盖面广
-- 内容完整
-- 强调可考证性
-
-简单来说：
-
-> mtf.wiki 更像百科与档案馆，而 MioMtFWiki 更像社区实时参考站。
-
----
-
-## 参与项目
-
-欢迎帮助改进本站。
-
-如果你发现：
-
-- 内容错误
-- 信息过时
-- 更好的解释方式
-- 值得收录的新问题
-
-欢迎提交 Issue、Pull Request，或参与社区讨论。
-
-社区本身就是本站更新的重要来源。
-
----
+Windows 用户也可以直接运行 [`preview.bat`](./preview.bat)，一键完成构建并启动预览服务器。
 
 ## 社区交流
 
-📢 Telegram 频道
-[https://t.me/MioMtFWiki](https://t.me/MioMtFWiki)
+- Telegram 频道：<https://t.me/MioMtFWiki>
+- Telegram 群组：<https://t.me/MioMtFWikiGroup>
+- Discord 服务器：<https://discord.com/invite/DfUhMhnrHT>
 
-💬 Telegram 群组
-[https://t.me/MioMtFWikiGroup](https://t.me/MioMtFWikiGroup)
+## 许可
 
----
+除特别说明外，本仓库内容采用 [Creative Commons Attribution-NoDerivatives 4.0 International](./LICENSE)（CC BY-ND 4.0）许可。
 
-## License
-
-除特别说明外，本仓库中的文档内容采用 **Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)** 协议进行许可。
-
-你可以：
-
-- 复制、转载、镜像和重新分发本项目内容；
-- 将内容打包为 PDF、EPUB、离线数据库或其他格式；
-- 在网站、应用程序或其他媒介中展示本项目内容；
-- 在遵守协议要求的前提下进行商业传播。
-
-你必须：
-
-- 标明内容来源；
-- 保留原作者及贡献者信息；
-- 提供本项目链接及协议链接；
-- 明确说明内容来自 MioMtFWiki。
-
-你不得：
-
-- 修改、删减、重写或翻译项目内容后再次发布；
-- 将修改后的版本以 MioMtFWiki 名义传播；
-
-为适应不同设备和媒介而进行的技术性修改（包括但不限于格式转换、搜索索引、离线打包、界面适配、响应式排版等）不视为对内容的修改。
-
-完整协议：
-
-https://creativecommons.org/licenses/by-nd/4.0/
+你可以在保留署名、项目链接和许可信息的前提下复制与重新分发原始内容，但不得发布经过修改、删减、重写或翻译的版本。为适配设备和媒介所作的纯技术性格式转换不视为内容修改。完整条款以 [`LICENSE`](./LICENSE) 为准。

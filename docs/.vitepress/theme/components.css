@@ -761,11 +761,12 @@ html.dark .VPDocAsideOutline .content {
   background: rgba(245,169,184,.075);
 }
 
-@media (min-width: 640px) and (max-width: 1199px) {
+@media (min-width: 640px) and (max-width: 1439px) {
   .VPHero:not(.has-image) .actions {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 8px;
+    max-width: 760px;
   }
 
   .VPHero:not(.has-image) .action:last-child:nth-child(odd) {
@@ -779,18 +780,18 @@ html.dark .VPDocAsideOutline .content {
   }
 }
 
-@media (min-width: 960px) and (max-width: 1199px) {
+@media (min-width: 960px) and (max-width: 1439px) {
   .VPHero:not(.has-image) .main {
     width: 100%;
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1440px) {
   .VPHero:not(.has-image) .main {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 520px;
+    grid-template-columns: minmax(0, 1fr) minmax(440px, 520px);
     grid-template-rows: min-content min-content;
-    column-gap: 48px;
+    column-gap: clamp(32px, 3vw, 48px);
     align-items: start;
     width: 100%;
   }

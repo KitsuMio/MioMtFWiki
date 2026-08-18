@@ -335,6 +335,7 @@ html.dark .VPSidebar .curtain {
   border-radius: 12px;
   background: color-mix(in srgb, var(--vp-c-bg-soft) 62%, transparent);
   box-shadow:
+    0 0 0 var(--vp-c-brand-1) inset,
     0 1px 0 rgba(255, 255, 255, .42) inset,
     0 5px 16px rgba(74, 58, 39, .025);
   transition:
@@ -348,6 +349,7 @@ html.dark .VPSidebar .VPSidebarItem.level-1 > .item {
   border-color: rgba(148, 163, 184, .12);
   background: rgba(30, 41, 59, .62);
   box-shadow:
+    0 0 0 var(--vp-c-brand-1) inset,
     0 1px 0 rgba(255, 255, 255, .025) inset,
     0 7px 18px rgba(2, 6, 23, .07);
 }
@@ -357,6 +359,7 @@ html.dark .VPSidebar .VPSidebarItem.level-1 > .item {
   border-color: color-mix(in srgb, var(--vp-c-brand-1) 38%, var(--vp-c-divider));
   background: color-mix(in srgb, var(--vp-c-brand-soft) 34%, var(--vp-c-bg-soft));
   box-shadow:
+    0 0 0 var(--vp-c-brand-1) inset,
     0 1px 0 rgba(255, 255, 255, .48) inset,
     0 8px 22px rgba(231, 121, 149, .07);
 }
@@ -371,6 +374,7 @@ html.dark .VPSidebar .VPSidebarItem.level-1 > .item {
     );
   box-shadow:
     3px 0 0 var(--vp-c-brand-1) inset,
+    0 1px 0 rgba(255, 255, 255, 0) inset,
     0 8px 24px rgba(231, 121, 149, .09);
 }
 

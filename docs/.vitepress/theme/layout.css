@@ -3,6 +3,12 @@
   --mio-nav-edge: rgba(104, 88, 67, .1);
 }
 
+/* Mobile WebKit/Chromium otherwise paints a square grey overlay around links
+   and buttons on touch. Components already provide their own pressed states. */
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
 html.dark {
   --mio-nav-shadow: 0 12px 34px rgba(2, 6, 23, .2);
   --mio-nav-edge: rgba(148, 163, 184, .09);

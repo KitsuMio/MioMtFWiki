@@ -196,6 +196,85 @@
   animation: mio-hero-enter .8s .42s var(--ease-out-soft) both;
 }
 
+/* Homepage declaration: editorial and assertive without losing the site's
+   restrained academic character. */
+.VPHome .vp-doc .home-manifesto {
+  position: relative;
+  isolation: isolate;
+  margin: 30px 0 44px;
+  padding: 34px 44px 32px 48px;
+  overflow: hidden;
+  border: 1px solid rgba(142, 102, 78, .17);
+  border-left: 4px solid var(--vp-c-brand-1);
+  border-radius: 2px 18px 18px 2px;
+  background:
+    linear-gradient(112deg, rgba(255, 250, 240, .82), rgba(255, 255, 255, .46)),
+    rgba(245, 238, 222, .5);
+  box-shadow:
+    0 18px 48px rgba(89, 68, 48, .08),
+    inset 0 1px rgba(255, 255, 255, .72);
+}
+
+.VPHome .vp-doc .home-manifesto::after {
+  content: "“";
+  position: absolute;
+  z-index: -1;
+  top: -35px;
+  right: 22px;
+  color: rgba(231, 121, 149, .1);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 190px;
+  font-weight: 700;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.VPHome .vp-doc .home-manifesto p {
+  margin: 0;
+  color: var(--vp-c-text-1);
+  font-family: var(--vp-font-family-heading) !important;
+  font-size: clamp(20px, 1.55vw, 25px);
+  font-weight: 600;
+  line-height: 1.8;
+  letter-spacing: .025em;
+}
+
+.VPHome .vp-doc .home-manifesto strong {
+  font-family: var(--vp-font-family-heading) !important;
+  font-weight: inherit;
+}
+
+.dark .VPHome .vp-doc .home-manifesto {
+  border-color: rgba(240, 138, 169, .18);
+  border-left-color: var(--vp-c-brand-1);
+  background:
+    linear-gradient(112deg, rgba(31, 43, 65, .92), rgba(22, 33, 53, .72)),
+    rgba(17, 27, 45, .72);
+  box-shadow:
+    0 20px 54px rgba(0, 0, 0, .18),
+    inset 0 1px rgba(255, 255, 255, .045);
+}
+
+@media (max-width: 639px) {
+  .VPHome .vp-doc .home-manifesto {
+    margin-top: 24px;
+    margin-bottom: 34px;
+    padding: 28px 24px 26px 27px;
+    border-radius: 2px 14px 14px 2px;
+  }
+
+  .VPHome .vp-doc .home-manifesto::after {
+    top: -20px;
+    right: 8px;
+    font-size: 126px;
+  }
+
+  .VPHome .vp-doc .home-manifesto p {
+    font-size: 18px;
+    line-height: 1.75;
+  }
+}
+
 /* =========================================================
    Hero Buttons
 ========================================================= */

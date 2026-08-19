@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 // @ts-expect-error markdown-it-footnote does not publish TypeScript declarations.
 import footnote from 'markdown-it-footnote'
+import { cjkInlineTypography } from './markdown/cjk-inline'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -25,6 +26,7 @@ export default defineConfig({
     math: true,
     config(md) {
       md.use(footnote)
+      md.use(cjkInlineTypography)
     }
   },
   themeConfig: {
@@ -49,6 +51,7 @@ export default defineConfig({
           { text: '我怀疑自己是MtF，该做什么？', link: '/first-step' },
           { text: '概念与术语', link: '/concepts' },
           { text: '常见刻板印象与误解', link: '/stereotypes' },
+          { text: '驳 HRT 减寿论', link: '/hrt-lifespan-myth' },
           { text: '激素抽血化验指南', link: '/hormone-testing-guide' },
           { text: '高频问题', link: '/faq' },
           { text: '关于 AI 与本站内容', link: '/ai-assistance' },

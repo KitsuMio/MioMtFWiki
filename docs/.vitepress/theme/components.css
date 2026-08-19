@@ -979,38 +979,52 @@ html.dark .VPDocAsideOutline .content {
     gap: 8px;
     max-height: 332px;
     max-width: none;
-    margin: -36px;
+    margin: -18px -36px -36px;
     overflow-x: hidden;
     overflow-y: auto;
     overscroll-behavior: contain;
-    padding: 36px;
-    scrollbar-width: none;
+    padding: 18px 36px 36px;
+    scrollbar-width: thin;
+    scrollbar-color: color-mix(in srgb, var(--vp-c-text-3) 46%, transparent) transparent;
   }
 
   /* Up to ten entries (five rows) fit without scrolling. Once an eleventh
      entry exists, expose part of the next row as an unmistakable cue that the
      index continues below. */
   .VPHero:not(.has-image) .actions:has(.action:nth-child(11)) {
-    max-height: 298px;
+    max-height: 270px;
   }
 
   .VPHero:not(.has-image) .actions.has-scroll-overflow.can-scroll-down {
-    -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 calc(100% - 18px), transparent 100%);
-    mask-image: linear-gradient(180deg, #000 0%, #000 calc(100% - 18px), transparent 100%);
+    -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 calc(100% - 44px), transparent 100%);
+    mask-image: linear-gradient(180deg, #000 0%, #000 calc(100% - 44px), transparent 100%);
   }
 
   .VPHero:not(.has-image) .actions.has-scroll-overflow.can-scroll-up.can-scroll-down {
-    -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 18px, #000 calc(100% - 18px), transparent 100%);
-    mask-image: linear-gradient(180deg, transparent 0%, #000 18px, #000 calc(100% - 18px), transparent 100%);
+    -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 32px, #000 calc(100% - 44px), transparent 100%);
+    mask-image: linear-gradient(180deg, transparent 0%, #000 32px, #000 calc(100% - 44px), transparent 100%);
   }
 
   .VPHero:not(.has-image) .actions.has-scroll-overflow.can-scroll-up.is-scroll-bottom {
-    -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 18px, #000 100%);
-    mask-image: linear-gradient(180deg, transparent 0%, #000 18px, #000 100%);
+    -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 32px, #000 100%);
+    mask-image: linear-gradient(180deg, transparent 0%, #000 32px, #000 100%);
   }
 
   .VPHero:not(.has-image) .actions::-webkit-scrollbar {
-    display: none;
+    width: 5px;
+  }
+
+  .VPHero:not(.has-image) .actions::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .VPHero:not(.has-image) .actions::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--vp-c-text-3) 46%, transparent);
+  }
+
+  .VPHero:not(.has-image) .actions::-webkit-scrollbar-thumb:hover {
+    background: color-mix(in srgb, var(--vp-c-text-2) 58%, transparent);
   }
 
   .VPHero:not(.has-image) .action:last-child:nth-child(odd) {
@@ -1237,6 +1251,17 @@ div[class*="language-"] {
   border-collapse: separate;
   border-spacing: 0;
   border: 1px solid var(--vp-c-border);
+}
+
+/* VitePress makes tables block-level scroll containers. On desktop that lets
+   short rows keep their intrinsic width while the decorated table box spans
+   the article, producing a large empty column on the right. Use real table
+   layout at reading widths; narrow screens retain native horizontal scroll. */
+@media (min-width: 640px) {
+  .vp-doc table {
+    display: table;
+    width: 100%;
+  }
 }
 
 /* border-collapse 改为 separate 后，相邻单元格各自的边框会

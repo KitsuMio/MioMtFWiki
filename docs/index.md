@@ -20,6 +20,9 @@ hero:
       text: 刻板印象与误解
       link: /stereotypes
     - theme: alt
+      text: 驳 HRT 减寿论
+      link: /hrt-lifespan-myth
+    - theme: alt
       text: 激素抽血化验指南
       link: /hormone-testing-guide
     - theme: alt

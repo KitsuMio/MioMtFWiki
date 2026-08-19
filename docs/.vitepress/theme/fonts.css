@@ -101,6 +101,23 @@ body,
   font-family: var(--vp-font-family-base) !important;
 }
 
+/* 行内语义排版：强调清楚，但不制造额外的色块来打断阅读。 */
+.vp-doc strong {
+  font-weight: 700;
+  color: var(--vp-c-text-1);
+}
+
+.vp-doc em {
+  font-style: italic;
+  color: color-mix(in srgb, var(--vp-c-text-1) 88%, var(--vp-c-brand-1));
+}
+
+.vp-doc s {
+  color: var(--vp-c-text-3);
+  text-decoration-color: color-mix(in srgb, currentColor 64%, transparent);
+  text-decoration-thickness: .08em;
+}
+
 /* -------------------------
  * 表格（HarmonyOS Sans SC）
  * ------------------------- */

@@ -37,6 +37,10 @@ export default defineConfig({
     darkModeSwitchTitle: '切换到深色模式',
     sidebarMenuLabel: '菜单',
     returnToTopLabel: '返回顶部',
+    docFooter: {
+      prev: '上一页',
+      next: '下一页'
+    },
 
     nav: [
       { text: '首页', link: '/' },
